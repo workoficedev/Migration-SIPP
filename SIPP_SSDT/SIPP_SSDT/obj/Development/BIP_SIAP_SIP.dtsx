@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{A10E9867-7E49-49CE-A126-1B8B985EC82F}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{90C66137-7599-4011-B4C8-0B28A644D4F8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACCCPmX3Avv3mgJI6SzMD87AAAAAASAAACgAAAAEAAAAE33H0TnAeA4Hd+3P7EW6FgYAAAA68ggDKhrGbDdmHhuJ74zDAuMd3qUFxGaFAAAAH11OILQYsdYb8E452gIIW3Yvr+z</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADJQ4kVeJGBGkHWIG/Wk1q+AAAAAASAAACgAAAAEAAAAChf+MBg6kXxGxxopsvL7rQYAAAAgO6pVY4AaRDc/7yDpjHgd+Nph+xGxq7VFAAAAGxU7pmhEdgIv3AWMv2r5z5oaahm</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,13 +42,30 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACtf/jo4KNlYzGFICMiZjnZAAAAAASAAACgAAAAEAAAACWAbqCsM7mf2TTAzb2QrFgYAAAAE6pUwiq1SIlpe8uCs0rk1CgRRNR6A3kZFAAAAM/xqrvz2Y5SnVOMhySGPRZOr8B7</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAYh3vRvk11NAWCzPj98YF8AAAAAASAAACgAAAAEAAAAG9Bx21DTgbHfBjNo66QecAYAAAAzRqFTp5ziN0Wu+UHjEtpnwRu10UnJ326FAAAAEik3A2KoeYVfVqWTpTTbZFtrv2l</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DELETE Maestro Pais"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D502E16A-2371-4D9A-ACDF-7A3058A4DBA9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DELETE Maestro Pais"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
+          SQLTask:SqlStatementSource="DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\DELETE Tables"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
@@ -75,12 +92,485 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Localizacion Traduccion"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
           SQLTask:SqlStatementSource="INSERT INTO [Localizacion].[Traduccion] VALUES (1, CAST(N'2018-07-13T19:36:28.797' AS DateTime), 1, CAST(N'2018-07-13T19:36:28.797' AS DateTime), 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Maestro Pais"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F1D6E441-8828-4BE4-A963-F05B31C44D09}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Maestro Pais"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Maestro Pais\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Maestro].[Pais]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Maestro Pais\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SIPP Destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[SIPP Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCorta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="DescripcionCorta"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLarga]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="DescripcionLarga"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdCreacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdCreacion"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EsActivo]"
+                      cachedDataType="i4"
+                      cachedName="EsActivo"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EsActivo]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdActualizacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdActualizacion"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaActualizacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaActualizacion"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                    <inputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Eliminado]"
+                      cachedDataType="i4"
+                      cachedName="Eliminado"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PaisId]"
+                      dataType="i4"
+                      name="PaisId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EsActivo]"
+                      dataType="bool"
+                      name="EsActivo" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      dataType="bool"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Maestro Pais\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Maestro Pais\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+DescripcionCorta,
+DescripcionLarga,
+1 as UsuarioIdCreacion,
+1 as EsActivo,
+GETDATE() as FechaCreacion,
+1 as UsuarioIdActualizacion,
+GETDATE() as FechaActualizacion,
+0 as Eliminado
+from dbo.pais</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Maestro Pais\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BIP SIAP Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[BIP SIAP Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      length="5"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      length="30"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EsActivo]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]"
+                      name="EsActivo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      name="FechaCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      name="Eliminado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EsActivo]"
+                      dataType="i4"
+                      name="EsActivo" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      dataType="i4"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EsActivo]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EsActivo]"
+                      name="EsActivo" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      name="FechaCreacion" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      name="Eliminado" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Maestro Pais.Paths[OLE DB Source Output]"
+              endId="Package\Maestro Pais\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Maestro Pais\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1173,6 +1663,14 @@ from [dbo].[EMPLEADO]</property>
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Seguridad Cargo" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{B85764C2-BACF-4854-A3D3-C93DABC6C829}"
+      DTS:From="Package\Seguridad Usuarios"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DELETE Maestro Pais" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{9FBFB06A-8B54-4F20-9A56-5B055824400C}"
@@ -1180,6 +1678,14 @@ from [dbo].[EMPLEADO]</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Localizacion Traduccion" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{E6D23300-8E3C-4738-8457-9AAB1AA4F001}"
+      DTS:From="Package\DELETE Maestro Pais"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Maestro Pais" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1192,11 +1698,15 @@ from [dbo].[EMPLEADO]</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\DELETE Tables"
           TopLeft="68,25" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Localizacion Traduccion"
+          TopLeft="313,27" />
         <NodeLayout
           Size="157,42"
           Id="Package\Seguridad Cargo"
@@ -1219,44 +1729,6 @@ from [dbo].[EMPLEADO]</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Localizacion Traduccion"
-          TopLeft="313,27" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="201,98">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="176.666666666667,-29"
-              Start="0,0"
-              End="176.666666666667,-21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-10.5175651120533" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-10.5175651120533"
-                    Point2="0,-14.5175651120533"
-                    Point3="4,-14.5175651120533" />
-                  <mssgle:LineSegment
-                    End="172.666666666667,-14.5175651120533" />
-                  <mssgle:CubicBezierSegment
-                    Point1="172.666666666667,-14.5175651120533"
-                    Point2="176.666666666667,-14.5175651120533"
-                    Point3="176.666666666667,-18.5175651120533" />
-                  <mssgle:LineSegment
-                    End="176.666666666667,-21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1299,6 +1771,92 @@ from [dbo].[EMPLEADO]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="201,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="176.666666666667,-29"
+              Start="0,0"
+              End="176.666666666667,-21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-10.5175651120533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-10.5175651120533"
+                    Point2="0,-14.5175651120533"
+                    Point3="4,-14.5175651120533" />
+                  <mssgle:LineSegment
+                    End="172.666666666667,-14.5175651120533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="172.666666666667,-14.5175651120533"
+                    Point2="176.666666666667,-14.5175651120533"
+                    Point3="176.666666666667,-18.5175651120533" />
+                  <mssgle:LineSegment
+                    End="176.666666666667,-21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Maestro Pais"
+          TopLeft="342,167" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\DELETE Maestro Pais"
+          TopLeft="83,164" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="173,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="261,186.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81,0"
+              Start="0,0"
+              End="73.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="73.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1306,15 +1864,15 @@ from [dbo].[EMPLEADO]</property>
     design-time-name="Package\Seguridad Cargo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Seguridad Cargo\OLE DB Source"
-          TopLeft="173,55" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Seguridad Cargo\OLE DB Destination"
           TopLeft="161,133" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Seguridad Cargo\OLE DB Source"
+          TopLeft="173,55" />
         <EdgeLayout
           Id="Package\Seguridad Cargo.Paths[OLE DB Source Output]"
           TopLeft="247.25,97">
@@ -1334,12 +1892,35 @@ from [dbo].[EMPLEADO]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad Cargo\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad Cargo\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Seguridad Usuarios">
     <LayoutInfo>
@@ -1406,8 +1987,46 @@ from [dbo].[EMPLEADO]</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Maestro Pais">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Maestro Pais\OLE DB Source"
+          TopLeft="171,61" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Maestro Pais\OLE DB Destination"
+          TopLeft="163,170" />
+        <EdgeLayout
+          Id="Package\Maestro Pais.Paths[OLE DB Source Output]"
+          TopLeft="247.25,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Seguridad Cargo\OLE DB Source">
+    design-time-name="Package\Maestro Pais\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1415,7 +2034,7 @@ from [dbo].[EMPLEADO]</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Seguridad Cargo\OLE DB Destination">
+    design-time-name="Package\Maestro Pais\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
