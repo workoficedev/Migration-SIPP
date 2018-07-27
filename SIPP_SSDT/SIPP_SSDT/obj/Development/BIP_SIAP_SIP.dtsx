@@ -1,0 +1,1431 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/25/2018 5:54:32 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PE-LPALQ00139"
+  DTS:CreatorName="GALILEO\EXTEHUAMANI"
+  DTS:DTSID="{D1F58C1C-9C07-47E1-B093-1097AF8DC317}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="10250"
+  DTS:ObjectName="BIP_SIAP_SIP"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{A10E9867-7E49-49CE-A126-1B8B985EC82F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BIP SIAP Source]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2940E4B9-01FB-4BB5-B8D2-5D1198F292A3}"
+      DTS:ObjectName="BIP SIAP Source">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=172.16.242.24;User ID=bipdev;Initial Catalog=BIP_PERU;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACCCPmX3Avv3mgJI6SzMD87AAAAAASAAACgAAAAEAAAAE33H0TnAeA4Hd+3P7EW6FgYAAAA68ggDKhrGbDdmHhuJ74zDAuMd3qUFxGaFAAAAH11OILQYsdYb8E452gIIW3Yvr+z</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SIPP Destination]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
+      DTS:ObjectName="SIPP Destination">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=PE-LPALQ00139\MSSQLSERVER2012;User ID=sa;Initial Catalog=SIPP_Test;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACtf/jo4KNlYzGFICMiZjnZAAAAAASAAACgAAAAEAAAACWAbqCsM7mf2TTAzb2QrFgYAAAAE6pUwiq1SIlpe8uCs0rk1CgRRNR6A3kZFAAAAM/xqrvz2Y5SnVOMhySGPRZOr8B7</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DELETE Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{48E7ADB8-F028-4769-9C78-D791239031DA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DELETE Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
+          SQLTask:SqlStatementSource="DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Localizacion Traduccion"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9590413D-32E3-4328-B64E-368D47D94AEB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Localizacion Traduccion"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
+          SQLTask:SqlStatementSource="INSERT INTO [Localizacion].[Traduccion] VALUES (1, CAST(N'2018-07-13T19:36:28.797' AS DateTime), 1, CAST(N'2018-07-13T19:36:28.797' AS DateTime), 0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Seguridad Cargo"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A11F8E9F-F8FF-4F85-9996-8D234A997038}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Seguridad Cargo"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Seguridad Cargo\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Maestro].[Cargo]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Seguridad Cargo\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SIPP Destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[SIPP Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCorta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DescripcionCorta"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLarga]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="70"
+                      cachedName="DescripcionLarga"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abreviatura]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Abreviatura"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abreviatura]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCortaTraduccionId]"
+                      cachedDataType="i4"
+                      cachedName="DescripcionCortaTraduccionId"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCortaTraduccionId]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLargaTraduccionId]"
+                      cachedDataType="i4"
+                      cachedName="DescripcionLargaTraduccionId"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLargaTraduccionId]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EsActivo]"
+                      cachedDataType="i4"
+                      cachedName="EsActivo"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EsActivo]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdCreacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdCreacion"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdActualizacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdActualizacion"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaActualizacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaActualizacion"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Eliminado]"
+                      cachedDataType="i4"
+                      cachedName="Eliminado"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CargoId]"
+                      dataType="i4"
+                      name="CargoId" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="Abreviatura" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionCortaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionLargaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EsActivo]"
+                      dataType="bool"
+                      name="EsActivo" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      dataType="bool"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Seguridad Cargo\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Seguridad Cargo\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+DescripcionCorta,
+DescripcionLarga,
+DescripcionCorta as Abreviatura,
+1 as DescripcionCortaTraduccionId,
+1 as DescripcionLargaTraduccionId,
+Estado as EsActivo,
+1 as UsuarioIdCreacion,
+GETDATE() as FechaCreacion,
+1 as UsuarioIdActualizacion,
+GETDATE() as FechaActualizacion,
+0 as Eliminado
+from dbo.cargo</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Seguridad Cargo\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BIP SIAP Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[BIP SIAP Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      length="10"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      length="70"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abreviatura]"
+                      length="10"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]"
+                      name="Abreviatura"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCortaTraduccionId]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]"
+                      name="DescripcionCortaTraduccionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLargaTraduccionId]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]"
+                      name="DescripcionLargaTraduccionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EsActivo]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]"
+                      name="EsActivo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      name="FechaCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      name="Eliminado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="70"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Abreviatura" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionCortaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionLargaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EsActivo]"
+                      dataType="i4"
+                      name="EsActivo" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      dataType="i4"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="70"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abreviatura]"
+                      name="Abreviatura" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCortaTraduccionId]"
+                      name="DescripcionCortaTraduccionId" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLargaTraduccionId]"
+                      name="DescripcionLargaTraduccionId" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EsActivo]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EsActivo]"
+                      name="EsActivo" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      name="FechaCreacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      name="Eliminado" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Seguridad Cargo.Paths[OLE DB Source Output]"
+              endId="Package\Seguridad Cargo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Seguridad Cargo\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Seguridad Usuarios"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{310C8B1A-03B4-4488-9FF6-679172F55BC0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Seguridad Usuarios"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Seguridad Usuarios\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Seguridad].[Usuario]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Seguridad Usuarios\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SIPP Destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[SIPP Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NombreUsuario]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="NombreUsuario"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreUsuario]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreUsuario]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Clave]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Clave"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clave]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[Clave]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidacionAD]"
+                      cachedDataType="i4"
+                      cachedName="ValidacionAD"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidacionAD]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidacionAD]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EsActivo]"
+                      cachedDataType="i4"
+                      cachedName="EsActivo"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EsActivo]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdCreacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdCreacion"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdActualizacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdActualizacion"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaActualizacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaActualizacion"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Eliminado]"
+                      cachedDataType="i4"
+                      cachedName="Eliminado"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioId]"
+                      dataType="i4"
+                      name="UsuarioId" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreUsuario]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="NombreUsuario" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Clave]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Clave" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidacionAD]"
+                      dataType="bool"
+                      name="ValidacionAD" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EsActivo]"
+                      dataType="bool"
+                      name="EsActivo" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      dataType="bool"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Seguridad Usuarios\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Seguridad Usuarios\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[EMPLEADO]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+IDUSUARIO as NombreUsuario,
+IDUSUARIO as Clave,
+1 as ValidacionAD,
+1 as EsActivo,
+1 as UsuarioIdCreacion,
+GETDATE() as FechaCreacion,
+1 as UsuarioIdActualizacion,
+GETDATE() as FechaActualizacion,
+0 as Eliminado
+from [dbo].[EMPLEADO]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Seguridad Usuarios\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BIP SIAP Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[BIP SIAP Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreUsuario]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NombreUsuario]"
+                      length="20"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[NombreUsuario]"
+                      name="NombreUsuario"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[Clave]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Clave]"
+                      length="20"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[Clave]"
+                      name="Clave"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidacionAD]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ValidacionAD]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValidacionAD]"
+                      name="ValidacionAD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EsActivo]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]"
+                      name="EsActivo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      name="FechaCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      name="Eliminado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NombreUsuario]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="NombreUsuario" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Clave]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Clave" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ValidacionAD]"
+                      dataType="i4"
+                      name="ValidacionAD" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EsActivo]"
+                      dataType="i4"
+                      name="EsActivo" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      dataType="i4"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NombreUsuario]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NombreUsuario]"
+                      name="NombreUsuario" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Clave]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Clave]"
+                      name="Clave" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ValidacionAD]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ValidacionAD]"
+                      name="ValidacionAD" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EsActivo]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EsActivo]"
+                      name="EsActivo" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      name="FechaCreacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      name="Eliminado" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Seguridad Usuarios.Paths[OLE DB Source Output]"
+              endId="Package\Seguridad Usuarios\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Seguridad Usuarios\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{BAC72400-3D4B-48F6-9E3F-4D84B4BE26C7}"
+      DTS:From="Package\DELETE Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Seguridad Usuarios" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5C6AE400-D1D9-4FE7-A77A-26C002391481}"
+      DTS:From="Package\Localizacion Traduccion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Seguridad Cargo" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{9FBFB06A-8B54-4F20-9A56-5B055824400C}"
+      DTS:From="Package\Seguridad Usuarios"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Localizacion Traduccion" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DELETE Tables"
+          TopLeft="68,25" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Seguridad Cargo"
+          TopLeft="332,94" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Seguridad Usuarios"
+          TopLeft="89,98" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="145,67">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Localizacion Traduccion"
+          TopLeft="313,27" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="201,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="176.666666666667,-29"
+              Start="0,0"
+              End="176.666666666667,-21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-10.5175651120533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-10.5175651120533"
+                    Point2="0,-14.5175651120533"
+                    Point3="4,-14.5175651120533" />
+                  <mssgle:LineSegment
+                    End="172.666666666667,-14.5175651120533" />
+                  <mssgle:CubicBezierSegment
+                    Point1="172.666666666667,-14.5175651120533"
+                    Point2="176.666666666667,-14.5175651120533"
+                    Point3="176.666666666667,-18.5175651120533" />
+                  <mssgle:LineSegment
+                    End="176.666666666667,-21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="438.333333333333,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.8333333333333,25"
+              Start="0,0"
+              End="-27.8333333333333,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,6.12526096033403" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,6.12526096033403"
+                    Point2="0,10.125260960334"
+                    Point3="-4,10.125260960334" />
+                  <mssgle:LineSegment
+                    End="-23.8333333333333,10.125260960334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.8333333333333,10.125260960334"
+                    Point2="-27.8333333333333,10.125260960334"
+                    Point3="-27.8333333333333,14.125260960334" />
+                  <mssgle:LineSegment
+                    End="-27.8333333333333,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Seguridad Cargo">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Seguridad Cargo\OLE DB Source"
+          TopLeft="173,55" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Seguridad Cargo\OLE DB Destination"
+          TopLeft="161,133" />
+        <EdgeLayout
+          Id="Package\Seguridad Cargo.Paths[OLE DB Source Output]"
+          TopLeft="247.25,97">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Seguridad Usuarios">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Seguridad Usuarios\OLE DB Source"
+          TopLeft="162,62" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Seguridad Usuarios\OLE DB Destination"
+          TopLeft="151,162" />
+        <EdgeLayout
+          Id="Package\Seguridad Usuarios.Paths[OLE DB Source Output]"
+          TopLeft="236.75,104">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad Usuarios\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad Usuarios\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad Cargo\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad Cargo\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
