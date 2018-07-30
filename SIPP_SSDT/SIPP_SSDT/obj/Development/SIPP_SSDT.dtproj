@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">PE-LPALQ00139</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAACAAAAAAADZgAAwAAAABAAAAChZj7VtTPmPGUimPyGfxy2AAAAAASAAACgAAAAEAAAABWbx8I5z0yquyKc2NEWtsyIAAAAzIsQFNfOW3sbi1WscJJX76V1dzrKpJZGZ4BC3rr2S09wx0YyMyZ9p8L6508NJGZvRggeJ7Rxu2DSXa1JaHFGz08cXdzj+LDoBUvgpEhNkp5vAYYHS0KVe/8ZFRXy8JLRoYNByfIzkzIKzBDnF4SEv52Io+D4iLDL+ZTAkmdsQFbwTt55iUI2lRQAAACFMqOIFpe4gK8TG1ZkCT1c2d/Lnw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAACAAAAAAADZgAAwAAAABAAAABXSp4wX+Qw/k1OXiwtRoYIAAAAAASAAACgAAAAEAAAADwTONRPgcE+DjlwZYJaGJqIAAAAgo23RVRVI64Z6k7/2PUAGtcZSFrjlvNn0S5J45v4U9lhapD8i/8/RdvdE+M1WWsRidKsU+riLnW4k8yMVBW8PznIOfE0UQQV5pQDLznOhSl8HBbt5cbx6dDiRr6eZzCi+rH7xYLjEF0QoRmA9fZpsgKjcZXlSLt/sMouXgt93zWuTpWv6tk00hQAAACokjmExaw+v7Rja1BMGvYy4oUUTA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">BIP_SIAP_SIP</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">27</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">40</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{90C66137-7599-4011-B4C8-0B28A644D4F8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{782B8E20-DF3E-49D4-8D9F-F7E8A05C70B4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -63,7 +63,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=172.16.242.24;User ID=bipdev;Initial Catalog=BIP_PERU;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=172.16.242.24;User ID=bipdev;Initial Catalog=BIP_PERU_QA;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -78,7 +78,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">BIP_PERU</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">BIP_PERU_QA</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
