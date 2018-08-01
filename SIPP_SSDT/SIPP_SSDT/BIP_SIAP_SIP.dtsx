@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{E8E12FD5-E498-468F-A195-75603E691331}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{E55F20F9-5A85-4ABF-9B72-73A2545120CC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAIcZ2RrUg+fFXnJEYooilXAAAAAASAAACgAAAAEAAAAIAx73BHgChBqXYWNrKtoicYAAAAZqNpIhYyzCDx78+wMxcDoXhhMrzknPS6FAAAAG1OxNQgr1/L1goyP6NV2QTmZxy6</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAdlh7LCnjRbteLQjyN4eXxAAAAAASAAACgAAAAEAAAAL+X6lYKxzTqn+y/2gn0NzYYAAAAOxyOzlvtTxy7bFIRiAGNCu71pDdrZD+pFAAAAAHkOVzppLWmsi4XeknmNUJuKz2p</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABsrddV1YYyZVjcUn/6P0sAAAAAAASAAACgAAAAEAAAAMS8xTEMgcuyV6XE4h1QeJ4YAAAAlYhkCCIXDXpYTHCSRQq7qqNxxe/n0vknFAAAAJ+dxxV58Iim8Tsj1LO3NJxgll6D</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAARvb9ZybKTWRYJNki4CkKcAAAAAASAAACgAAAAEAAAABM3ZKFTfI0DL5UWxJLtvX4YAAAAmhRWcC+aFyOMXYjIHlFnkdoItOTdKd4pFAAAAOsj8FM5Bb6mFdTT1lxU7XclW1Xa</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -63,7 +63,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
-          SQLTask:SqlStatementSource="DELETE FROM [Maestro].[TipoDocumentoIdentidad]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoDocumentoIdentidad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Ciudad]&#xA;DBCC CHECKIDENT ('[Maestro].[Ciudad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Empresa]&#xA;DBCC CHECKIDENT ('[Maestro].[Empresa]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM [Maestro].[TipoNegocio]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoNegocio]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[ModalidadVenta]&#xA;DBCC CHECKIDENT ('[Maestro].[ModalidadVenta]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAtributo]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAtributo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoDocumentoIdentidad]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoDocumentoIdentidad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Ciudad]&#xA;DBCC CHECKIDENT ('[Maestro].[Ciudad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Empresa]&#xA;DBCC CHECKIDENT ('[Maestro].[Empresa]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2610,6 +2610,548 @@ inner join mig.Pais pa on ce.IdPais = pa.PaisId_BIP</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Maestro ModalidadVenta"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{21D5494C-3A16-4E76-B6C0-B9A53E59C231}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Maestro ModalidadVenta"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Maestro ModalidadVenta\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Maestro].[ModalidadVenta]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Maestro ModalidadVenta\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SIPP Destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[SIPP Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCorta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="DescripcionCorta"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLarga]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="DescripcionLarga"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abreviatura]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Abreviatura"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abreviatura]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCortaTraduccionId]"
+                      cachedDataType="i4"
+                      cachedName="DescripcionCortaTraduccionId"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCortaTraduccionId]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLargaTraduccionId]"
+                      cachedDataType="i4"
+                      cachedName="DescripcionLargaTraduccionId"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLargaTraduccionId]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdCreacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdCreacion"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdActualizacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdActualizacion"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaActualizacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaActualizacion"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                    <inputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Eliminado]"
+                      cachedDataType="i4"
+                      cachedName="Eliminado"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ModalidadVentaId]"
+                      dataType="i4"
+                      name="ModalidadVentaId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="Abreviatura" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionCortaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionLargaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      dataType="bool"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Maestro ModalidadVenta\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Maestro ModalidadVenta\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+DESCRIPCIONLARGA as DescripcionCorta,
+DESCRIPCIONLARGA as DescripcionLarga,
+DESCRIPCIONLARGA as Abreviatura,
+1 as DescripcionCortaTraduccionId,
+1 as DescripcionLargaTraduccionId,
+1 as UsuarioIdCreacion,
+GETDATE() as FechaCreacion,
+1 as UsuarioIdActualizacion,
+GETDATE() as FechaActualizacion,
+0 as Eliminado
+from dbo.VW_MODALIDADVENTA
+where IDIDIOMA = 1</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Maestro ModalidadVenta\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BIP SIAP Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[BIP SIAP Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      length="100"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      length="100"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abreviatura]"
+                      length="100"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]"
+                      name="Abreviatura"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCortaTraduccionId]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]"
+                      name="DescripcionCortaTraduccionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLargaTraduccionId]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]"
+                      name="DescripcionLargaTraduccionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      name="FechaCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      name="Eliminado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Abreviatura" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionCortaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionLargaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      dataType="i4"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abreviatura]"
+                      name="Abreviatura" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCortaTraduccionId]"
+                      name="DescripcionCortaTraduccionId" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLargaTraduccionId]"
+                      name="DescripcionLargaTraduccionId" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      name="FechaCreacion" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      name="Eliminado" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Maestro ModalidadVenta.Paths[OLE DB Source Output]"
+              endId="Package\Maestro ModalidadVenta\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Maestro ModalidadVenta\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Maestro Pais"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -3648,6 +4190,549 @@ from dbo.TIPODOCUMENTO</property>
               endId="Package\Maestro TipoDocumentoIdentidad\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Maestro TipoDocumentoIdentidad\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Maestro TipoNegocio"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3D95B576-9954-4F53-AE3C-310F50EDBE8A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Maestro TipoNegocio"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Maestro TipoNegocio\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Maestro].[TipoNegocio]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Maestro TipoNegocio\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SIPP Destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[SIPP Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCorta]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="DescripcionCorta"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLarga]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="DescripcionLarga"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Abreviatura]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="Abreviatura"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abreviatura]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionCortaTraduccionId]"
+                      cachedDataType="i4"
+                      cachedName="DescripcionCortaTraduccionId"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCortaTraduccionId]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DescripcionLargaTraduccionId]"
+                      cachedDataType="i4"
+                      cachedName="DescripcionLargaTraduccionId"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLargaTraduccionId]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdCreacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdCreacion"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaCreacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaCreacion"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdActualizacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdActualizacion"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaActualizacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaActualizacion"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                    <inputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Eliminado]"
+                      cachedDataType="i4"
+                      cachedName="Eliminado"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoNegocioId]"
+                      dataType="i4"
+                      name="TipoNegocioId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="Abreviatura" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionCortaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionLargaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
+                      dataType="bool"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Maestro TipoNegocio\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Maestro TipoNegocio\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+pai.DescripcionCorta as DescripcionCorta,
+pai.DescripcionLarga as DescripcionLarga,
+pai.DescripcionCorta as Abreviatura,
+1 as DescripcionCortaTraduccionId,
+1 as DescripcionLargaTraduccionId,
+1 as UsuarioIdCreacion,
+GETDATE() as FechaCreacion,
+1 as UsuarioIdActualizacion,
+GETDATE() as FechaActualizacion,
+0 as Eliminado
+from dbo.CONFIGURACION_SISTEMA_LOCAL_X_NEGOCIO CSLN 
+INNER JOIN dbo.PARAMETROGLOBAL_IDIOMA pai ON csln.parametronegocio = pai.IDPARAMETRO
+WHERE pai.IDIDIOMA = 1</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Maestro TipoNegocio\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BIP SIAP Source]"
+                  connectionManagerRefId="Package.ConnectionManagers[BIP SIAP Source]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      length="30"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      length="100"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abreviatura]"
+                      length="30"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]"
+                      name="Abreviatura"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCortaTraduccionId]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]"
+                      name="DescripcionCortaTraduccionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLargaTraduccionId]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]"
+                      name="DescripcionLargaTraduccionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]"
+                      name="FechaCreacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
+                      name="Eliminado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="DescripcionCorta" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="DescripcionLarga" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="Abreviatura" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionCortaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      name="DescripcionLargaTraduccionId" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      name="UsuarioIdCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaCreacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      name="UsuarioIdActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaActualizacion" />
+                    <externalMetadataColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
+                      dataType="i4"
+                      name="Eliminado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
+                      name="DescripcionCorta" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                      name="DescripcionLarga" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abreviatura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Abreviatura]"
+                      name="Abreviatura" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCortaTraduccionId]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCortaTraduccionId]"
+                      name="DescripcionCortaTraduccionId" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLargaTraduccionId]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionLargaTraduccionId]"
+                      name="DescripcionLargaTraduccionId" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaCreacion]"
+                      name="FechaCreacion" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Eliminado]"
+                      name="Eliminado" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Maestro TipoNegocio.Paths[OLE DB Source Output]"
+              endId="Package\Maestro TipoNegocio\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Maestro TipoNegocio\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -5921,7 +7006,7 @@ from [dbo].[EMPLEADO]</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Temp TipoDocumentoIdentidad"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5938,7 +7023,7 @@ from [dbo].[EMPLEADO]</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Temp Usuarios"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="3">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5983,8 +7068,8 @@ from [dbo].[EMPLEADO]</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
       DTS:CreationName=""
-      DTS:DTSID="{9C60214B-685A-45E4-85FA-4B4A1A0DEEF8}"
-      DTS:From="Package\Seguridad Usuarios"
+      DTS:DTSID="{CCDC33F7-463E-4357-865F-3FF943177538}"
+      DTS:From="Package\Localizacion Traduccion"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 12"
       DTS:To="Package\Maestro TipoDocumentoIdentidad" />
@@ -6061,6 +7146,22 @@ from [dbo].[EMPLEADO]</property>
       DTS:ObjectName="Constraint 20"
       DTS:To="Package\Seguridad UsuarioAtributo" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 21]"
+      DTS:CreationName=""
+      DTS:DTSID="{A484CB88-A8BF-4D89-B156-9370BB880A80}"
+      DTS:From="Package\Localizacion Traduccion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 21"
+      DTS:To="Package\Maestro ModalidadVenta" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 22]"
+      DTS:CreationName=""
+      DTS:DTSID="{E3B4923A-2309-4501-9F92-4D35B6014394}"
+      DTS:From="Package\Localizacion Traduccion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 22"
+      DTS:To="Package\Maestro TipoNegocio" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{9FBFB06A-8B54-4F20-9A56-5B055824400C}"
@@ -6132,34 +7233,34 @@ from [dbo].[EMPLEADO]</property>
         <NodeLayout
           Size="150,42"
           Id="Package\DELETE Tables"
-          TopLeft="68,25" />
+          TopLeft="539,60" />
         <NodeLayout
           Size="153,42"
           Id="Package\Flow Temp Pais"
-          TopLeft="304,250" />
+          TopLeft="766,291" />
         <NodeLayout
           Size="190,42"
           Id="Package\Localizacion Traduccion"
-          TopLeft="282,173" />
+          TopLeft="337,213" />
         <NodeLayout
           Size="138,42"
           Id="Package\Maestro Pais"
-          TopLeft="73,170" />
+          TopLeft="573,210" />
         <NodeLayout
           Size="147,42"
           Id="Package\Maestro Cargo"
-          TopLeft="558,171" />
+          TopLeft="395,301" />
         <NodeLayout
           Size="170,42"
           Id="Package\Seguridad Usuarios"
-          TopLeft="60,98" />
+          TopLeft="531,133" />
         <NodeLayout
           Size="128,42"
           Id="Package\Temp Pais"
-          TopLeft="83,244" />
+          TopLeft="757,203" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="144.5,67">
+          TopLeft="615.5,102">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6181,18 +7282,18 @@ from [dbo].[EMPLEADO]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="472,193">
+          TopLeft="465.416666666667,255">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="86,0"
+              EndConnector="0,46"
               Start="0,0"
-              End="78.5,0">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="78.5,0" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6203,7 +7304,253 @@ from [dbo].[EMPLEADO]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="143.5,140">
+          TopLeft="642.5,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="589,175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-126.666666666667,38"
+              Start="0,0"
+              End="-126.666666666667,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.023016353725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.023016353725"
+                    Point2="0,19.023016353725"
+                    Point3="-4,19.023016353725" />
+                  <mssgle:LineSegment
+                    End="-122.666666666667,19.023016353725" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-122.666666666667,19.023016353725"
+                    Point2="-126.666666666667,19.023016353725"
+                    Point3="-126.666666666667,23.023016353725" />
+                  <mssgle:LineSegment
+                    End="-126.666666666667,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="711,227.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46,0"
+              Start="0,0"
+              End="38.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="819.666666666667,245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Mestro Empresa"
+          TopLeft="940,193" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="866.666666666667,291">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.333333333333,-56"
+              Start="0,0"
+              End="126.333333333333,-48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-24.004603181127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-24.004603181127"
+                    Point2="0,-28.004603181127"
+                    Point3="4,-28.004603181127" />
+                  <mssgle:LineSegment
+                    End="122.333333333333,-28.004603181127" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.333333333333,-28.004603181127"
+                    Point2="126.333333333333,-28.004603181127"
+                    Point3="126.333333333333,-32.004603181127" />
+                  <mssgle:LineSegment
+                    End="126.333333333333,-48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Maestro Ciudad"
+          TopLeft="762,359" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="840.25,333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Temp Usuarios"
+          TopLeft="817,135" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Flow Temp Usuario"
+          TopLeft="1118,140" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="701,155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116,0"
+              Start="0,0"
+              End="108.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="108.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="966,158.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152,0"
+              Start="0,0"
+              End="144.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="144.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Temp Empresa"
+          TopLeft="961,279" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Flow Temp Empresa"
+          TopLeft="946,351" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="1039,235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="1034.75,321">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -6223,308 +7570,28 @@ from [dbo].[EMPLEADO]</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="172,140">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="174.666666666667,33"
-              Start="0,0"
-              End="174.666666666667,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.5199878861296" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.5199878861296"
-                    Point2="0,16.5199878861296"
-                    Point3="4,16.5199878861296" />
-                  <mssgle:LineSegment
-                    End="170.666666666667,16.5199878861296" />
-                  <mssgle:CubicBezierSegment
-                    Point1="170.666666666667,16.5199878861296"
-                    Point2="174.666666666667,16.5199878861296"
-                    Point3="174.666666666667,20.5199878861296" />
-                  <mssgle:LineSegment
-                    End="174.666666666667,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="143.5,212">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="211,268">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="93,0"
-              Start="0,0"
-              End="85.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="85.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Mestro Empresa"
-          TopLeft="556,243" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="457,267.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="99,0"
-              Start="0,0"
-              End="91.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="91.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Maestro Ciudad"
-          TopLeft="304,323" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="380.25,292">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="149,42"
-          Id="Package\Temp Usuarios"
-          TopLeft="296,99" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Flow Temp Usuario"
-          TopLeft="549,99" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="230,119.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="66,0"
-              Start="0,0"
-              End="58.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="58.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="445,120">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="104,0"
-              Start="0,0"
-              End="96.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="96.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Temp Empresa"
-          TopLeft="784,244" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Flow Temp Empresa"
-          TopLeft="1037,224" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="711,264.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73,0"
-              Start="0,0"
-              End="65.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="65.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="934,265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="103,-20"
-              Start="0,0"
-              End="95.5,-20">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="47.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47.5,0"
-                    Point2="51.5,0"
-                    Point3="51.5,-4" />
-                  <mssgle:LineSegment
-                    End="51.5,-16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.5,-16"
-                    Point2="51.5,-20"
-                    Point3="55.5,-20" />
-                  <mssgle:LineSegment
-                    End="95.5,-20" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="239,42"
           Id="Package\Maestro TipoDocumentoIdentidad"
-          TopLeft="248,27" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="172,98">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="195.5,-29"
-              Start="0,0"
-              End="195.5,-21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-7.76223776223776" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-7.76223776223776"
-                    Point2="0,-11.7622377622378"
-                    Point3="4,-11.7622377622378" />
-                  <mssgle:LineSegment
-                    End="191.5,-11.7622377622378" />
-                  <mssgle:CubicBezierSegment
-                    Point1="191.5,-11.7622377622378"
-                    Point2="195.5,-11.7622377622378"
-                    Point3="195.5,-15.7622377622378" />
-                  <mssgle:LineSegment
-                    End="195.5,-21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="276,119" />
         <NodeLayout
           Size="228,42"
           Id="Package\Temp TipoDocumentoIdentidad"
-          TopLeft="519,27" />
+          TopLeft="283,19" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="487,48">
+          TopLeft="396.25,119">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32,0"
+              EndConnector="0,-58"
               Start="0,0"
-              End="24.5,0">
+              End="0,-50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.5,0" />
+                    End="0,-50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6536,21 +7603,33 @@ from [dbo].[EMPLEADO]</property>
         <NodeLayout
           Size="253,42"
           Id="Package\Flow Temp TipoDocumentoIdentidad"
-          TopLeft="786,27" />
+          TopLeft="1224,75" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="747,48">
+          TopLeft="511,40">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="39,0"
+              EndConnector="713,56"
               Start="0,0"
-              End="31.5,0">
+              End="705.5,56">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="31.5,0" />
+                    End="352.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="352.5,0"
+                    Point2="356.5,0"
+                    Point3="356.5,4" />
+                  <mssgle:LineSegment
+                    End="356.5,52" />
+                  <mssgle:CubicBezierSegment
+                    Point1="356.5,52"
+                    Point2="356.5,56"
+                    Point3="360.5,56" />
+                  <mssgle:LineSegment
+                    End="705.5,56" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6562,37 +7641,25 @@ from [dbo].[EMPLEADO]</property>
         <NodeLayout
           Size="137,42"
           Id="Package\Temp Cargo"
-          TopLeft="788,188" />
+          TopLeft="585,298" />
         <NodeLayout
           Size="162,42"
           Id="Package\Flow Temp Cargo"
-          TopLeft="779,132" />
+          TopLeft="569,408" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="705,192">
+          TopLeft="542,320.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83,17"
+              EndConnector="43,0"
               Start="0,0"
-              End="75.5,17">
+              End="35.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="37.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="37.5,0"
-                    Point2="41.5,0"
-                    Point3="41.5,4" />
-                  <mssgle:LineSegment
-                    End="41.5,13" />
-                  <mssgle:CubicBezierSegment
-                    Point1="41.5,13"
-                    Point2="41.5,17"
-                    Point3="45.5,17" />
-                  <mssgle:LineSegment
-                    End="75.5,17" />
+                    End="35.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6603,30 +7670,18 @@ from [dbo].[EMPLEADO]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="788,203.333333333333">
+          TopLeft="651.75,340">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9,-50.3333333333333"
+              EndConnector="0,68"
               Start="0,0"
-              End="-16.5,-50.3333333333333">
+              End="0,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-27.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-27.5,0"
-                    Point2="-31.5,0"
-                    Point3="-31.5,-4" />
-                  <mssgle:LineSegment
-                    End="-31.5,-46.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-31.5,-46.3333333333333"
-                    Point2="-31.5,-50.3333333333333"
-                    Point3="-27.5,-50.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-16.5,-50.3333333333333" />
+                    End="0,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6638,21 +7693,33 @@ from [dbo].[EMPLEADO]</property>
         <NodeLayout
           Size="202,42"
           Id="Package\Seguridad UsuarioAtributo"
-          TopLeft="1030,100" />
+          TopLeft="1139,395" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="718,120.5">
+          TopLeft="1202.5,182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="312,0"
+              EndConnector="37.5,213"
               Start="0,0"
-              End="304.5,0">
+              End="37.5,205.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="304.5,0" />
+                    End="0,102.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,102.5"
+                    Point2="0,106.5"
+                    Point3="4,106.5" />
+                  <mssgle:LineSegment
+                    End="33.5,106.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.5,106.5"
+                    Point2="37.5,106.5"
+                    Point3="37.5,110.5" />
+                  <mssgle:LineSegment
+                    End="37.5,205.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6663,30 +7730,30 @@ from [dbo].[EMPLEADO]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 18]"
-          TopLeft="912.5,69">
+          TopLeft="1350.5,117">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="218.5,31"
+              EndConnector="-62,278"
               Start="0,0"
-              End="218.5,23.5">
+              End="-62,270.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5" />
+                    End="0,178.918566775244" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.5"
-                    Point2="0,15.5"
-                    Point3="4,15.5" />
+                    Point1="0,178.918566775244"
+                    Point2="0,182.918566775244"
+                    Point3="-4,182.918566775244" />
                   <mssgle:LineSegment
-                    End="214.5,15.5" />
+                    End="-58,182.918566775244" />
                   <mssgle:CubicBezierSegment
-                    Point1="214.5,15.5"
-                    Point2="218.5,15.5"
-                    Point3="218.5,19.5" />
+                    Point1="-58,182.918566775244"
+                    Point2="-62,182.918566775244"
+                    Point3="-62,186.918566775244" />
                   <mssgle:LineSegment
-                    End="218.5,23.5" />
+                    End="-62,270.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6697,30 +7764,30 @@ from [dbo].[EMPLEADO]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="941,153">
+          TopLeft="731,429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89,-26.3333333333333"
+              EndConnector="408,-13"
               Start="0,0"
-              End="81.5,-26.3333333333333">
+              End="400.5,-13">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="47.4403669724771,0" />
+                    End="200,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="47.4403669724771,0"
-                    Point2="51.4403669724771,0"
-                    Point3="51.4403669724771,-4" />
+                    Point1="200,0"
+                    Point2="204,0"
+                    Point3="204,-4" />
                   <mssgle:LineSegment
-                    End="51.4403669724771,-22.3333333333333" />
+                    End="204,-9" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.4403669724771,-22.3333333333333"
-                    Point2="51.4403669724771,-26.3333333333333"
-                    Point3="55.4403669724771,-26.3333333333333" />
+                    Point1="204,-9"
+                    Point2="204,-13"
+                    Point3="208,-13" />
                   <mssgle:LineSegment
-                    End="81.5,-26.3333333333333" />
+                    End="400.5,-13" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6731,18 +7798,122 @@ from [dbo].[EMPLEADO]</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 20]"
-          TopLeft="1127.75,224">
+          TopLeft="1121,372">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-82"
+              EndConnector="70.5,23"
               Start="0,0"
-              End="0,-74.5">
+              End="70.5,15.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-74.5" />
+                    End="66.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.5,0"
+                    Point2="70.5,0"
+                    Point3="70.5,4" />
+                  <mssgle:LineSegment
+                    End="70.5,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Maestro ModalidadVenta"
+          TopLeft="288,355" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="398.583333333333,213">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-52"
+              Start="0,0"
+              End="0,-44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="401.666666666667,255">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.1666666666667,100"
+              Start="0,0"
+              End="-16.1666666666667,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5010438413361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.5010438413361"
+                    Point2="0,40.5010438413361"
+                    Point3="-4,40.5010438413361" />
+                  <mssgle:LineSegment
+                    End="-12.1666666666667,40.5010438413361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.1666666666667,40.5010438413361"
+                    Point2="-16.1666666666667,40.5010438413361"
+                    Point3="-16.1666666666667,44.5010438413361" />
+                  <mssgle:LineSegment
+                    End="-16.1666666666667,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Maestro TipoNegocio"
+          TopLeft="176,299" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 22]"
+          TopLeft="386.5,255">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-121.5,44"
+              Start="0,0"
+              End="-121.5,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.0726643598616" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.0726643598616"
+                    Point2="0,15.0726643598616"
+                    Point3="-4,15.0726643598616" />
+                  <mssgle:LineSegment
+                    End="-117.5,15.0726643598616" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-117.5,15.0726643598616"
+                    Point2="-121.5,15.0726643598616"
+                    Point3="-121.5,19.0726643598616" />
+                  <mssgle:LineSegment
+                    End="-121.5,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6829,7 +8000,7 @@ from [dbo].[EMPLEADO]</property>
     design-time-name="Package\Maestro Pais">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Maestro Pais\OLE DB Destination"
@@ -6857,9 +8028,7 @@ from [dbo].[EMPLEADO]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6890,7 +8059,7 @@ from [dbo].[EMPLEADO]</property>
     design-time-name="Package\Maestro Cargo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Maestro Cargo\OLE DB Destination"
@@ -6918,9 +8087,7 @@ from [dbo].[EMPLEADO]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6951,7 +8118,7 @@ from [dbo].[EMPLEADO]</property>
     design-time-name="Package\Seguridad Usuarios">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Seguridad Usuarios\OLE DB Source"
@@ -6979,9 +8146,7 @@ from [dbo].[EMPLEADO]</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7486,6 +8651,136 @@ from [dbo].[EMPLEADO]</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Seguridad UsuarioAtributo\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Maestro ModalidadVenta">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Maestro ModalidadVenta\OLE DB Source"
+          TopLeft="106,26" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Maestro ModalidadVenta\OLE DB Destination"
+          TopLeft="82,119" />
+        <EdgeLayout
+          Id="Package\Maestro ModalidadVenta.Paths[OLE DB Source Output]"
+          TopLeft="181,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5,51"
+              Start="0,0"
+              End="-13.5,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.5"
+                    Point2="0,25.5"
+                    Point3="-4,25.5" />
+                  <mssgle:LineSegment
+                    End="-9.5,25.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,25.5"
+                    Point2="-13.5,25.5"
+                    Point3="-13.5,29.5" />
+                  <mssgle:LineSegment
+                    End="-13.5,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Maestro ModalidadVenta\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Maestro ModalidadVenta\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Maestro TipoNegocio">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Maestro TipoNegocio\OLE DB Source"
+          TopLeft="184,63" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Maestro TipoNegocio\OLE DB Destination"
+          TopLeft="181,160" />
+        <EdgeLayout
+          Id="Package\Maestro TipoNegocio.Paths[OLE DB Source Output]"
+          TopLeft="262.75,105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Maestro TipoNegocio\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Maestro TipoNegocio\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
