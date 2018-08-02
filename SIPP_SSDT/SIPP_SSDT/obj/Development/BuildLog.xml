@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SIPP_SSDT</Name>
-    <LastWriteTime>2018-07-30T19:26:18.1559598Z</LastWriteTime>
+    <LastWriteTime>2018-08-01T17:05:22.3706646Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>BIP_SIAP_SIP.dtsx</Name>
-      <LastWriteTime>2018-07-31T21:53:25.7259766Z</LastWriteTime>
+      <LastWriteTime>2018-08-01T22:42:56.8929893Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
