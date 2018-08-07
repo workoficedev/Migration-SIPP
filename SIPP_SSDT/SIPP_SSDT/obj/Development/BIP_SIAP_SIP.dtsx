@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="167"
-  DTS:VersionGUID="{2936AD74-E538-474D-9070-9BAF28FBD3BB}">
+  DTS:VersionBuild="172"
+  DTS:VersionGUID="{BB18B33C-099B-4C9C-9298-44F172FECF82}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABgsvDriI6L2XBwosFgc8pnAAAAAASAAACgAAAAEAAAAA4GAeW4TWSpwdTYgUKMnioYAAAA5G39CwIwLJa6+nPrmvjQoZyjOqdTWYvdFAAAAKaCLbua1eW14cz23FA6gLHihNQB</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAZrAQpIL/lDRx4DPadV8lGAAAAAASAAACgAAAAEAAAAM/oiFJpP7EU2wasyUySMm8YAAAAnjJJvDIJe4Pa3fTsIiIaF1OARK3LtYxVFAAAABQKIXFqy00NPvlHR3uTXrMdbhJw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADrAnfJrueVXbls5LpTw+QVAAAAAASAAACgAAAAEAAAAHJJmv+4C9W3iwwKfkshpJEYAAAASi6yB9yN4bEBxkWE+Np8TTU9bdxY9ACeFAAAAC26rhEtxyEjQQmnXdELYuxUt9pd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACNDsdk1187r/GjStuCkK6nAAAAAASAAACgAAAAEAAAAFLRP1k+tfgsFHaJAGeExDYYAAAAy3Nm5s6koH2UHzd2Vc0z2F6El4S+HIUGFAAAADCCZ+pA1AmjWeCS6eZ/ZdtdHd5U</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACLW4jZYZkVm5rgvVVdMvusAAAAAASAAACgAAAAEAAAAMcWqF6B6oFQqb2quiagPCMYAAAApKXB0ERvTAs5rHwjKSncrWJMqoOgSa5hFAAAACHmEZv4HdmnuyfoLnIoBbFpOkQd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADc2Rey2zhrsYLjNFb9G7MyAAAAAASAAACgAAAAEAAAAIkCPd7f9K03KdhAqcjZUSEYAAAAJJm96QIgPHIzLWlnqDaV10Uc1d1y5KkmFAAAADi6obstzxz+IpGvXeW+tAxH5yMN</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -73,7 +73,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Localizacion Traduccion"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -827,7 +827,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -844,7 +844,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1702,7 +1702,7 @@ from dbo.cargo</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Cargo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1719,7 +1719,7 @@ from dbo.cargo</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Cargo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3012,7 +3012,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3029,7 +3029,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3879,7 +3879,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Tables"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3896,7 +3896,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Migracion Pais"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5504,7 +5504,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5521,7 +5521,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Maestro Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7943,7 +7943,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7960,7 +7960,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10150,7 +10150,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10167,7 +10167,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10997,7 +10997,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema table"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11014,7 +11014,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion ModalidadVenta"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11872,7 +11872,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11889,7 +11889,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12393,7 +12393,7 @@ GETDATE() as FechaActualizacion,
 NewId() as ETL
 from dbo.CONFIGURACION_SISTEMA_LOCAL_X_NEGOCIO CSLN 
 INNER JOIN dbo.PARAMETROGLOBAL_IDIOMA pai ON csln.parametronegocio = pai.IDPARAMETRO
-WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
+WHERE pai.IDIDIOMA = 1</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -12720,7 +12720,7 @@ WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12737,7 +12737,7 @@ WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12789,7 +12789,7 @@ WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
-              SQLTask:SqlStatementSource="DELETE FROM [Encuesta].[Periodo]&#xA;DBCC CHECKIDENT ('[Encuesta].[Periodo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioMarca]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Marca]&#xA;DBCC CHECKIDENT ('[Maestro].[Marca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[AgrupacionMarca]&#xA;DBCC CHECKIDENT ('[Maestro].[AgrupacionMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAmbito]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAmbito]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoNegocio]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoNegocio]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[ModalidadVenta]&#xA;DBCC CHECKIDENT ('[Maestro].[ModalidadVenta]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAtributo]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAtributo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoDocumentoIdentidad]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoDocumentoIdentidad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Ciudad]&#xA;DBCC CHECKIDENT ('[Maestro].[Ciudad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Empresa]&#xA;DBCC CHECKIDENT ('[Maestro].[Empresa]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DELETE FROM [Seguridad].[Rol]&#xA;DBCC CHECKIDENT ('[Seguridad].[Rol]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Encuesta].[Periodo]&#xA;DBCC CHECKIDENT ('[Encuesta].[Periodo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioMarca]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Marca]&#xA;DBCC CHECKIDENT ('[Maestro].[Marca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[AgrupacionMarca]&#xA;DBCC CHECKIDENT ('[Maestro].[AgrupacionMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAmbito]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAmbito]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoNegocio]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoNegocio]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[ModalidadVenta]&#xA;DBCC CHECKIDENT ('[Maestro].[ModalidadVenta]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAtributo]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAtributo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoDocumentoIdentidad]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoDocumentoIdentidad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Ciudad]&#xA;DBCC CHECKIDENT ('[Maestro].[Ciudad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Empresa]&#xA;DBCC CHECKIDENT ('[Maestro].[Empresa]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -18808,7 +18808,7 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table UsuarioMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18825,7 +18825,7 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion UsuarioMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18852,6 +18852,23 @@ order by UsuarioId</property>
           DTS:ObjectName="Constraint 1"
           DTS:To="Package\Migracion UsuarioMarca\Update Migracion UsuarioMarca" />
       </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Seguridad Rol"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1795FD17-5676-4F93-8BA8-51C50813E668}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Seguridad Rol"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
+          SQLTask:SqlStatementSource="&#xA;SET IDENTITY_INSERT [Seguridad].[Rol] ON &#xA;&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (1, 'Director', 'Director Insights', 'Director', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (2, 'Gerente', 'Gerente Insights Negocio y Operaciones', 'Gerente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (3, 'Jefe', 'Jefe Insights Negocio', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (4, 'Analista', 'Analista Insights Negocio', 'Analista', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (5, 'Asistente', 'Asistente Insights Negocio', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (6, 'Administrador', 'Administrador de Seguridad', 'Administrador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (7, 'Administrador', 'Administrador de Sistema', 'Administrador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (8, 'Soporte', 'Soporte de Sistema', 'Soporte', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (9, 'Jefe', 'Jefe Insight Campo', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (10, 'Supervisor', 'Supervisor Insight Campo', 'Supervisor', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (11, 'Verificador', 'Verificador Insight Campo', 'Verificador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (12, 'Asistente', 'Asistente Insight Campo', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (13, 'Auxiliar', 'Auxiliar Insight Campo', 'Auxiliar', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (14, 'Practicante', 'Practicante Insight Campo', 'Practicante', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (15, 'Encuestadora', 'Encuestadora Insight Campo', 'Encuestadora', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (16, 'Digitador', 'Digitador Insight Campo', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (17, 'Jefe', 'Jefe Insight Procesamiento', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (18, 'Analista', 'Analista Insight Procesamiento', 'Analista', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (19, 'Asistente', 'Asistente Insight Procesamiento', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (20, 'Practicante', 'Practicante Insight Procesamiento', 'Practicante', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (21, 'Digitador', 'Digitador Insight Procesamiento', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (22, 'Jefe', 'Jefe Soporte Comercial', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (23, 'Analista', 'Analista Soporte Digitación', 'Analista', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (24, 'Asistente', 'Asistente Soporte Digitación', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (25, 'Auxiliar', 'Auxiliar Soporte Digitación', 'Auxiliar', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (26, 'Digitador', 'Digitador Soporte Digitación', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (27, 'Digitador', 'Encuestador Soporte Digitación', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;&#xA;SET IDENTITY_INSERT [Seguridad].[Rol] OFF" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Seguridad UsuarioAtributo"
@@ -19931,6 +19948,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
       DTS:ObjectName="Constraint 20"
       DTS:To="Package\Migracion Encuesta Periodo" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 21]"
+      DTS:CreationName=""
+      DTS:DTSID="{36F33DEF-57BE-4253-BC8F-EC283EE4C274}"
+      DTS:From="Package\Localizacion Traduccion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 21"
+      DTS:To="Package\Seguridad Rol" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{BCAB38B0-676F-4882-86B1-E1B31BF2B715}"
@@ -20002,7 +20027,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         <NodeLayout
           Size="190,44"
           Id="Package\Localizacion Traduccion"
-          TopLeft="881,362" />
+          TopLeft="947,361" />
         <NodeLayout
           Size="202,42"
           Id="Package\Seguridad UsuarioAtributo"
@@ -20107,33 +20132,21 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           PanelSize="262,301"
           Size="262,43"
           Id="Package\Migracion Usuario"
-          TopLeft="841,576" />
+          TopLeft="832,585" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="1014.33333333333,576">
+          TopLeft="1008.5,585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-68.6666666666666,-170"
+              EndConnector="0,-180"
               Start="0,0"
-              End="-68.6666666666666,-162.5">
+              End="0,-172.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-80.7585036697972" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-80.7585036697972"
-                    Point2="0,-84.7585036697972"
-                    Point3="-4,-84.7585036697972" />
-                  <mssgle:LineSegment
-                    End="-64.6666666666666,-84.7585036697972" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-64.6666666666666,-84.7585036697972"
-                    Point2="-68.6666666666666,-84.7585036697972"
-                    Point3="-68.6666666666666,-88.7585036697972" />
-                  <mssgle:LineSegment
-                    End="-68.6666666666666,-162.5" />
+                    End="0,-172.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20267,21 +20280,21 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           PanelSize="257,230"
           Size="257,43"
           Id="Package\Migracion DBO Ciudad"
-          TopLeft="176,690" />
+          TopLeft="191,690" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="820,708.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-387,0"
+              EndConnector="-372,0"
               Start="0,0"
-              End="-379.5,0">
+              End="-364.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-379.5,0" />
+                    End="-364.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20292,18 +20305,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="975,619">
+          TopLeft="963,628">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,65.5"
+              EndConnector="-23.5,56.5"
               Start="0,0"
-              End="0,58">
+              End="-23.5,49">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58" />
+                    End="0,24.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.25"
+                    Point2="0,28.25"
+                    Point3="-4,28.25" />
+                  <mssgle:LineSegment
+                    End="-19.5,28.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.5,28.25"
+                    Point2="-23.5,28.25"
+                    Point3="-23.5,32.25" />
+                  <mssgle:LineSegment
+                    End="-23.5,49" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20314,30 +20339,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="1103,597.5">
+          TopLeft="1094,606.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="90,-13.5"
+              EndConnector="99,-22.5"
               Start="0,0"
-              End="82.5,-13.5">
+              End="91.5,-22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="41,0" />
+                    End="45.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="41,0"
-                    Point2="45,0"
-                    Point3="45,-4" />
+                    Point1="45.5,0"
+                    Point2="49.5,0"
+                    Point3="49.5,-4" />
                   <mssgle:LineSegment
-                    End="45,-9.5" />
+                    End="49.5,-18.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="45,-9.5"
-                    Point2="45,-13.5"
-                    Point3="49,-13.5" />
+                    Point1="49.5,-18.5"
+                    Point2="49.5,-22.5"
+                    Point3="53.5,-22.5" />
                   <mssgle:LineSegment
-                    End="82.5,-13.5" />
+                    End="91.5,-22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20530,18 +20555,18 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           TopLeft="1170,359" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="1071,382.25">
+          TopLeft="1137,381.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="99,0"
+              EndConnector="33,0"
               Start="0,0"
-              End="91.5,0">
+              End="25.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="91.5,0" />
+                    End="25.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20646,33 +20671,33 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           PanelSize="248,246"
           Size="248,43"
           Id="Package\Migracion Cargo"
-          TopLeft="1034,444" />
+          TopLeft="1054,453" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="1006.33333333333,406">
+          TopLeft="1072.33333333333,405">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="151.666666666667,38"
+              EndConnector="105.666666666667,48"
               Start="0,0"
-              End="151.666666666667,30.5">
+              End="105.666666666667,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.3903966597077" />
+                    End="0,15.4405010438413" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.3903966597077"
-                    Point2="0,15.3903966597077"
-                    Point3="4,15.3903966597077" />
+                    Point1="0,15.4405010438413"
+                    Point2="0,19.4405010438413"
+                    Point3="4,19.4405010438413" />
                   <mssgle:LineSegment
-                    End="147.666666666667,15.3903966597077" />
+                    End="101.666666666667,19.4405010438413" />
                   <mssgle:CubicBezierSegment
-                    Point1="147.666666666667,15.3903966597077"
-                    Point2="151.666666666667,15.3903966597077"
-                    Point3="151.666666666667,19.3903966597077" />
+                    Point1="101.666666666667,19.4405010438413"
+                    Point2="105.666666666667,19.4405010438413"
+                    Point3="105.666666666667,23.4405010438413" />
                   <mssgle:LineSegment
-                    End="151.666666666667,30.5" />
+                    End="105.666666666667,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20683,30 +20708,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="1158,487">
+          TopLeft="1178,496">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="103.666666666667,76"
+              EndConnector="83.6666666666667,67"
               Start="0,0"
-              End="103.666666666667,68.5">
+              End="83.6666666666667,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.2416502946955" />
+                    End="0,35.8840864440078" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.2416502946955"
-                    Point2="0,45.2416502946955"
-                    Point3="4,45.2416502946955" />
+                    Point1="0,35.8840864440078"
+                    Point2="0,39.8840864440078"
+                    Point3="4,39.8840864440078" />
                   <mssgle:LineSegment
-                    End="99.6666666666667,45.2416502946955" />
+                    End="79.6666666666667,39.8840864440078" />
                   <mssgle:CubicBezierSegment
-                    Point1="99.6666666666667,45.2416502946955"
-                    Point2="103.666666666667,45.2416502946955"
-                    Point3="103.666666666667,49.2416502946955" />
+                    Point1="79.6666666666667,39.8840864440078"
+                    Point2="83.6666666666667,39.8840864440078"
+                    Point3="83.6666666666667,43.8840864440078" />
                   <mssgle:LineSegment
-                    End="103.666666666667,68.5" />
+                    End="83.6666666666667,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20777,21 +20802,21 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           PanelSize="248,256"
           Size="248,43"
           Id="Package\Migracion TipoNegocio"
-          TopLeft="177,353" />
+          TopLeft="195,353" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="881,376.25">
+          TopLeft="947,375.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-456,0"
+              EndConnector="-504,0"
               Start="0,0"
-              End="-448.5,0">
+              End="-496.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-448.5,0" />
+                    End="-496.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20803,33 +20828,33 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         <NodeLayout
           Size="196,42"
           Id="Package\Migracion UsuarioAmbito"
-          TopLeft="104,434" />
+          TopLeft="116,437" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="261,396">
+          TopLeft="279,396">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-59,38"
+              EndConnector="-65,41"
               Start="0,0"
-              End="-59,30.5">
+              End="-65,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.3461538461538" />
+                    End="0,12.5576923076923" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.3461538461538"
-                    Point2="0,15.3461538461538"
-                    Point3="-4,15.3461538461538" />
+                    Point1="0,12.5576923076923"
+                    Point2="0,16.5576923076923"
+                    Point3="-4,16.5576923076923" />
                   <mssgle:LineSegment
-                    End="-55,15.3461538461538" />
+                    End="-61,16.5576923076923" />
                   <mssgle:CubicBezierSegment
-                    Point1="-55,15.3461538461538"
-                    Point2="-59,15.3461538461538"
-                    Point3="-59,19.3461538461538" />
+                    Point1="-61,16.5576923076923"
+                    Point2="-65,16.5576923076923"
+                    Point3="-65,20.5576923076923" />
                   <mssgle:LineSegment
-                    End="-59,30.5" />
+                    End="-65,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20840,30 +20865,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="263,690">
+          TopLeft="278,690">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-61,-214"
+              EndConnector="-64,-211"
               Start="0,0"
-              End="-61,-206.5">
+              End="-64,-203.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-82.3944315545244" />
+                    End="0,-81.1832946635731" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-82.3944315545244"
-                    Point2="0,-86.3944315545244"
-                    Point3="-4,-86.3944315545244" />
+                    Point1="0,-81.1832946635731"
+                    Point2="0,-85.1832946635731"
+                    Point3="-4,-85.1832946635731" />
                   <mssgle:LineSegment
-                    End="-57,-86.3944315545244" />
+                    End="-60,-85.1832946635731" />
                   <mssgle:CubicBezierSegment
-                    Point1="-57,-86.3944315545244"
-                    Point2="-61,-86.3944315545244"
-                    Point3="-61,-90.3944315545244" />
+                    Point1="-60,-85.1832946635731"
+                    Point2="-64,-85.1832946635731"
+                    Point3="-64,-89.1832946635731" />
                   <mssgle:LineSegment
-                    End="-61,-206.5" />
+                    End="-64,-203.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20937,30 +20962,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           TopLeft="751,492" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="929.666666666667,576">
+          TopLeft="920.666666666667,585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-51.1666666666666,-41"
+              EndConnector="-42.1666666666666,-50"
               Start="0,0"
-              End="-51.1666666666666,-33.5">
+              End="-42.1666666666666,-42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-12.5493171471927" />
+                    End="0,-16.1820940819423" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-12.5493171471927"
-                    Point2="0,-16.5493171471927"
-                    Point3="-4,-16.5493171471927" />
+                    Point1="0,-16.1820940819423"
+                    Point2="0,-20.1820940819423"
+                    Point3="-4,-20.1820940819423" />
                   <mssgle:LineSegment
-                    End="-47.1666666666666,-16.5493171471927" />
+                    End="-38.1666666666666,-20.1820940819423" />
                   <mssgle:CubicBezierSegment
-                    Point1="-47.1666666666666,-16.5493171471927"
-                    Point2="-51.1666666666666,-16.5493171471927"
-                    Point3="-51.1666666666666,-20.5493171471927" />
+                    Point1="-38.1666666666666,-20.1820940819423"
+                    Point2="-42.1666666666666,-20.1820940819423"
+                    Point3="-42.1666666666666,-24.1820940819423" />
                   <mssgle:LineSegment
-                    End="-51.1666666666666,-33.5" />
+                    End="-42.1666666666666,-42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21034,30 +21059,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           TopLeft="473.5,413" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="881,390">
+          TopLeft="947,389">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-154.5,44.5"
+              EndConnector="-220.5,45.5"
               Start="0,0"
-              End="-147,44.5">
+              End="-213,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-61.0526315789474,0" />
+                    End="-88.8421052631579,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-61.0526315789474,0"
-                    Point2="-65.0526315789474,0"
-                    Point3="-65.0526315789474,4" />
+                    Point1="-88.8421052631579,0"
+                    Point2="-92.8421052631579,0"
+                    Point3="-92.8421052631579,4" />
                   <mssgle:LineSegment
-                    End="-65.0526315789474,40.5" />
+                    End="-92.8421052631579,41.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-65.0526315789474,40.5"
-                    Point2="-65.0526315789474,44.5"
-                    Point3="-69.0526315789474,44.5" />
+                    Point1="-92.8421052631579,41.5"
+                    Point2="-92.8421052631579,45.5"
+                    Point3="-96.8421052631579,45.5" />
                   <mssgle:LineSegment
-                    End="-147,44.5" />
+                    End="-213,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21235,21 +21260,33 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           PanelSize="248,243"
           Size="248,43"
           Id="Package\Migracion UsuarioMarca"
-          TopLeft="472,593" />
+          TopLeft="556,624" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="596.25,538">
+          TopLeft="596.5,538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55"
+              EndConnector="83.5,86"
               Start="0,0"
-              End="0,47.5">
+              End="83.5,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.5" />
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
+                  <mssgle:LineSegment
+                    End="79.5,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79.5,43"
+                    Point2="83.5,43"
+                    Point3="83.5,47" />
+                  <mssgle:LineSegment
+                    End="83.5,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21260,30 +21297,24 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 18]"
-          TopLeft="901,684.5">
+          TopLeft="820,700.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-305,-48.5"
+              EndConnector="-140,-33.1666666666666"
               Start="0,0"
-              End="-305,-41">
+              End="-140,-25.6666666666666">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-15.5935162094763" />
+                    End="-136,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-15.5935162094763"
-                    Point2="0,-19.5935162094763"
-                    Point3="-4,-19.5935162094763" />
+                    Point1="-136,0"
+                    Point2="-140,0"
+                    Point3="-140,-4" />
                   <mssgle:LineSegment
-                    End="-301,-19.5935162094763" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-301,-19.5935162094763"
-                    Point2="-305,-19.5935162094763"
-                    Point3="-305,-23.5935162094763" />
-                  <mssgle:LineSegment
-                    End="-305,-41" />
+                    End="-140,-25.6666666666666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21350,37 +21381,25 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="True"
+          IsExpanded="False"
           PanelSize="264,200"
-          Size="264,243"
+          Size="264,43"
           Id="Package\Migracion Encuesta Periodo"
           TopLeft="229,540.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="341,396">
+          TopLeft="360,396">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="20,144.5"
+              EndConnector="0,144.5"
               Start="0,0"
-              End="20,137">
+              End="0,137">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.3557692307692" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,54.3557692307692"
-                    Point2="0,58.3557692307692"
-                    Point3="4,58.3557692307692" />
-                  <mssgle:LineSegment
-                    End="16,58.3557692307692" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16,58.3557692307692"
-                    Point2="20,58.3557692307692"
-                    Point3="20,62.3557692307692" />
-                  <mssgle:LineSegment
-                    End="20,137" />
+                    End="0,137" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21391,24 +21410,56 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 20]"
-          TopLeft="346,690">
+          TopLeft="361,690">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-117,-28"
+              EndConnector="0,-106.5"
               Start="0,0"
-              End="-109.5,-28">
+              End="0,-99">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-24"
-                    Point2="0,-28"
-                    Point3="-4,-28" />
+                    End="0,-99" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Seguridad Rol"
+          TopLeft="962,264" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="1042,361">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,-55"
+              Start="0,0"
+              End="-8,-47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-109.5,-28" />
+                    End="0,-23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.5"
+                    Point2="0,-27.5"
+                    Point3="-4,-27.5" />
+                  <mssgle:LineSegment
+                    End="-4,-27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,-27.5"
+                    Point2="-8,-27.5"
+                    Point3="-8,-31.5" />
+                  <mssgle:LineSegment
+                    End="-8,-47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

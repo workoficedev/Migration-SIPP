@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="169"
-  DTS:VersionGUID="{7267AA33-6AB0-4453-A48E-F02FE80183F7}">
+  DTS:VersionBuild="172"
+  DTS:VersionGUID="{BB18B33C-099B-4C9C-9298-44F172FECF82}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAApD8eZo2BVghcVX9CX2H2nAAAAAASAAACgAAAAEAAAACwPmhO+yCuUgOXR+denjmAYAAAAWS9+b4TfagDrVPmwP1cReC0qM4vhDizKFAAAAMnAbxadA2SEVSB+J9CE+p6CKFH5</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA68IPZ7cjnCaILNhzhXqN5AAAAAASAAACgAAAAEAAAAEIva7/+gCftIepJqDRP10wYAAAAIWUQ+JKJ8C0u00tLHE1jcJWYbcLlY5mLFAAAAE0tdHO5nLpd74gGwzEuGYajX3MY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD+r2v6M3mxEZ1DBaHIVF9rAAAAAASAAACgAAAAEAAAAO7jd/hzFs5lqV0sOtsQ+6cYAAAASUEMNh4933rW/BTXCigCS+fodI0Sw+LdFAAAAEtj+tGU8ZzywIeSDzYgUErqQBmp</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABgI4REWD9s8Byqe4qOYiHxAAAAAASAAACgAAAAEAAAADIDvq27OQzpXaJFfvkSc1cYAAAAAAHLbInh7Yw4FmO+GQb5yH8Ih8lV71TPFAAAANg+g+nnkB983LmHQSbCdIJeoGAL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACMPr0HmP6ZOlEip/C3IYF/AAAAAASAAACgAAAAEAAAAHop9mY9Lut6C3izOI48H9oYAAAAcbql4ZtwqSd8VHa/spx68frr50a95r0bFAAAAHVLIxs15Iea3Sqz8JwBEihlb0DD</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAOMP811E6iFJ+jGhLXYF01AAAAAASAAACgAAAAEAAAAEiFA5MDuEcTxj/cp42z9mIYAAAA/lhTUmldYqXjGYcvRWBfVVgHK/x8TN7SFAAAALfiLjRJ8kjoHk6UpZsTi1hPTr4n</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -827,7 +827,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -844,7 +844,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1702,7 +1702,7 @@ from dbo.cargo</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Cargo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1719,7 +1719,7 @@ from dbo.cargo</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Cargo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3012,7 +3012,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3029,7 +3029,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3879,7 +3879,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Tables"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3896,7 +3896,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Migracion Pais"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5504,7 +5504,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5521,7 +5521,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Maestro Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7943,7 +7943,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7960,7 +7960,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10150,7 +10150,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10167,7 +10167,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10997,7 +10997,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema table"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11014,7 +11014,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion ModalidadVenta"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11872,7 +11872,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11889,7 +11889,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12393,7 +12393,7 @@ GETDATE() as FechaActualizacion,
 NewId() as ETL
 from dbo.CONFIGURACION_SISTEMA_LOCAL_X_NEGOCIO CSLN 
 INNER JOIN dbo.PARAMETROGLOBAL_IDIOMA pai ON csln.parametronegocio = pai.IDPARAMETRO
-WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
+WHERE pai.IDIDIOMA = 1</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -12720,7 +12720,7 @@ WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12737,7 +12737,7 @@ WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12789,7 +12789,7 @@ WHERE pai.IDIDIOMA = 1 AND csln.parametronegocio = 86</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
-              SQLTask:SqlStatementSource="DELETE FROM [Encuesta].[Periodo]&#xA;DBCC CHECKIDENT ('[Encuesta].[Periodo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioMarca]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Marca]&#xA;DBCC CHECKIDENT ('[Maestro].[Marca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[AgrupacionMarca]&#xA;DBCC CHECKIDENT ('[Maestro].[AgrupacionMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAmbito]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAmbito]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoNegocio]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoNegocio]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[ModalidadVenta]&#xA;DBCC CHECKIDENT ('[Maestro].[ModalidadVenta]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAtributo]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAtributo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoDocumentoIdentidad]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoDocumentoIdentidad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Ciudad]&#xA;DBCC CHECKIDENT ('[Maestro].[Ciudad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Empresa]&#xA;DBCC CHECKIDENT ('[Maestro].[Empresa]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DELETE FROM [Seguridad].[Rol]&#xA;DBCC CHECKIDENT ('[Seguridad].[Rol]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Encuesta].[Periodo]&#xA;DBCC CHECKIDENT ('[Encuesta].[Periodo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioMarca]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Marca]&#xA;DBCC CHECKIDENT ('[Maestro].[Marca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[AgrupacionMarca]&#xA;DBCC CHECKIDENT ('[Maestro].[AgrupacionMarca]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAmbito]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAmbito]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoNegocio]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoNegocio]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[ModalidadVenta]&#xA;DBCC CHECKIDENT ('[Maestro].[ModalidadVenta]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[UsuarioAtributo]&#xA;DBCC CHECKIDENT ('[Seguridad].[UsuarioAtributo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[TipoDocumentoIdentidad]&#xA;DBCC CHECKIDENT ('[Maestro].[TipoDocumentoIdentidad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Ciudad]&#xA;DBCC CHECKIDENT ('[Maestro].[Ciudad]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Empresa]&#xA;DBCC CHECKIDENT ('[Maestro].[Empresa]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Pais]&#xA;DBCC CHECKIDENT ('[Maestro].[Pais]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Maestro].[Cargo]&#xA;DBCC CHECKIDENT ('[Maestro].[Cargo]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Localizacion].[Traduccion]&#xA;DBCC CHECKIDENT ('[Localizacion].[Traduccion]', RESEED, 0);&#xA;GO&#xA;&#xA;DELETE FROM [Seguridad].[Usuario]&#xA;DBCC CHECKIDENT ('[Seguridad].[Usuario]', RESEED, 0);&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -18808,7 +18808,7 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table UsuarioMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18825,7 +18825,7 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion UsuarioMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18852,6 +18852,23 @@ order by UsuarioId</property>
           DTS:ObjectName="Constraint 1"
           DTS:To="Package\Migracion UsuarioMarca\Update Migracion UsuarioMarca" />
       </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Seguridad Rol"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1795FD17-5676-4F93-8BA8-51C50813E668}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Seguridad Rol"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
+          SQLTask:SqlStatementSource="&#xA;SET IDENTITY_INSERT [Seguridad].[Rol] ON &#xA;&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (1, 'Director', 'Director Insights', 'Director', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (2, 'Gerente', 'Gerente Insights Negocio y Operaciones', 'Gerente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (3, 'Jefe', 'Jefe Insights Negocio', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (4, 'Analista', 'Analista Insights Negocio', 'Analista', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (5, 'Asistente', 'Asistente Insights Negocio', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (6, 'Administrador', 'Administrador de Seguridad', 'Administrador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (7, 'Administrador', 'Administrador de Sistema', 'Administrador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (8, 'Soporte', 'Soporte de Sistema', 'Soporte', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (9, 'Jefe', 'Jefe Insight Campo', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (10, 'Supervisor', 'Supervisor Insight Campo', 'Supervisor', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (11, 'Verificador', 'Verificador Insight Campo', 'Verificador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (12, 'Asistente', 'Asistente Insight Campo', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (13, 'Auxiliar', 'Auxiliar Insight Campo', 'Auxiliar', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (14, 'Practicante', 'Practicante Insight Campo', 'Practicante', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (15, 'Encuestadora', 'Encuestadora Insight Campo', 'Encuestadora', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (16, 'Digitador', 'Digitador Insight Campo', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (17, 'Jefe', 'Jefe Insight Procesamiento', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (18, 'Analista', 'Analista Insight Procesamiento', 'Analista', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (19, 'Asistente', 'Asistente Insight Procesamiento', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (20, 'Practicante', 'Practicante Insight Procesamiento', 'Practicante', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (21, 'Digitador', 'Digitador Insight Procesamiento', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (22, 'Jefe', 'Jefe Soporte Comercial', 'Jefe', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (23, 'Analista', 'Analista Soporte Digitación', 'Analista', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (24, 'Asistente', 'Asistente Soporte Digitación', 'Asistente', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (25, 'Auxiliar', 'Auxiliar Soporte Digitación', 'Auxiliar', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (26, 'Digitador', 'Digitador Soporte Digitación', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;INSERT [Seguridad].[Rol] ([RolId], [DescripcionCorta], [DescripcionLarga], [Abreviatura], [DescripcionCortaTraduccionId], [DescripcionLargaTraduccionId], [EsActivo], [UsuarioIdCreacion], [FechaCreacion], [UsuarioIdActualizacion], [FechaActualizacion], [Eliminado]) VALUES (27, 'Digitador', 'Encuestador Soporte Digitación', 'Digitador', 1, 1, 1, 1, getdate(), 1, getdate(), 0)&#xA;&#xA;SET IDENTITY_INSERT [Seguridad].[Rol] OFF" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Seguridad UsuarioAtributo"
@@ -19931,6 +19948,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
       DTS:ObjectName="Constraint 20"
       DTS:To="Package\Migracion Encuesta Periodo" />
     <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 21]"
+      DTS:CreationName=""
+      DTS:DTSID="{36F33DEF-57BE-4253-BC8F-EC283EE4C274}"
+      DTS:From="Package\Localizacion Traduccion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 21"
+      DTS:To="Package\Seguridad Rol" />
+    <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
       DTS:DTSID="{BCAB38B0-676F-4882-86B1-E1B31BF2B715}"
@@ -20107,21 +20132,21 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           PanelSize="262,301"
           Size="262,43"
           Id="Package\Migracion Usuario"
-          TopLeft="842,565" />
+          TopLeft="832,585" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="1013.5,565">
+          TopLeft="1008.5,585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-160"
+              EndConnector="0,-180"
               Start="0,0"
-              End="0,-152.5">
+              End="0,-172.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-152.5" />
+                    End="0,-172.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20280,18 +20305,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="975.5,608">
+          TopLeft="963,628">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,76.5"
+              EndConnector="-23.5,56.5"
               Start="0,0"
-              End="0,69">
+              End="-23.5,49">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69" />
+                    End="0,24.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.25"
+                    Point2="0,28.25"
+                    Point3="-4,28.25" />
+                  <mssgle:LineSegment
+                    End="-19.5,28.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.5,28.25"
+                    Point2="-23.5,28.25"
+                    Point3="-23.5,32.25" />
+                  <mssgle:LineSegment
+                    End="-23.5,49" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20302,18 +20339,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="1104,585.25">
+          TopLeft="1094,606.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89,0"
+              EndConnector="99,-22.5"
               Start="0,0"
-              End="81.5,0">
+              End="91.5,-22.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="81.5,0" />
+                    End="45.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.5,0"
+                    Point2="49.5,0"
+                    Point3="49.5,-4" />
+                  <mssgle:LineSegment
+                    End="49.5,-18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="49.5,-18.5"
+                    Point2="49.5,-22.5"
+                    Point3="53.5,-22.5" />
+                  <mssgle:LineSegment
+                    End="91.5,-22.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -20913,30 +20962,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           TopLeft="751,492" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="930.666666666667,565">
+          TopLeft="920.666666666667,585">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-52.1666666666666,-30"
+              EndConnector="-42.1666666666666,-50"
               Start="0,0"
-              End="-52.1666666666666,-22.5">
+              End="-42.1666666666666,-42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-8.1092564491654" />
+                    End="0,-16.1820940819423" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-8.1092564491654"
-                    Point2="0,-12.1092564491654"
-                    Point3="-4,-12.1092564491654" />
+                    Point1="0,-16.1820940819423"
+                    Point2="0,-20.1820940819423"
+                    Point3="-4,-20.1820940819423" />
                   <mssgle:LineSegment
-                    End="-48.1666666666666,-12.1092564491654" />
+                    End="-38.1666666666666,-20.1820940819423" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.1666666666666,-12.1092564491654"
-                    Point2="-52.1666666666666,-12.1092564491654"
-                    Point3="-52.1666666666666,-16.1092564491654" />
+                    Point1="-38.1666666666666,-20.1820940819423"
+                    Point2="-42.1666666666666,-20.1820940819423"
+                    Point3="-42.1666666666666,-24.1820940819423" />
                   <mssgle:LineSegment
-                    End="-52.1666666666666,-22.5" />
+                    End="-42.1666666666666,-42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21373,6 +21422,44 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,-99" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Seguridad Rol"
+          TopLeft="962,264" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="1042,361">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,-55"
+              Start="0,0"
+              End="-8,-47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.5"
+                    Point2="0,-27.5"
+                    Point3="-4,-27.5" />
+                  <mssgle:LineSegment
+                    End="-4,-27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,-27.5"
+                    Point2="-8,-27.5"
+                    Point3="-8,-31.5" />
+                  <mssgle:LineSegment
+                    End="-8,-47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
