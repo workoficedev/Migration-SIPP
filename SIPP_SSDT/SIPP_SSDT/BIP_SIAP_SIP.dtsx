@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="175"
-  DTS:VersionGUID="{13F2DA9D-C9AD-4CD9-9805-96D4B9E6CF2E}">
+  DTS:VersionBuild="191"
+  DTS:VersionGUID="{A1246E97-A051-44A2-AA6D-3704CEA749B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD2pKyLtQ4cRoMI6/jX3VPFAAAAAASAAACgAAAAEAAAAKDIKzpa4DPwPa70FPOosJ0YAAAASlEozVX8B48urjuXvIav0+S9hMwW5YTYFAAAAFJIRXme5tZdAIGFDCCkH92uUAbr</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACVqFeH+Ev3yBLe25ClMZ/vAAAAAASAAACgAAAAEAAAAJVPHhlz7b3qlgNT/1LPpxsYAAAAYVnZGkrVHmNvzXxXquIPZOPd4UpFGWr2FAAAACPGTioLYnVI6BueQ03UMkyt6vc0</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADsqx+IT5tWXACa1UCCNq7YAAAAAASAAACgAAAAEAAAANdeQ/ZVZd1xjy7suez8zS8YAAAAJoIYUJRV+59ZV2Jhz/r4UDMu99ITJS4jFAAAALOe99yCztcaj7XK5a7d1irFqNNv</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAzXMFTwXmWJtqBuCksefZ7AAAAAASAAACgAAAAEAAAAK6X0sJpJwPuPu5AH1QtHSgYAAAA5TRecwdzdgCARmYoSZMrdMH9LkahQtPfFAAAAP0TmAmF3KyXOUzY1Qrya0Wd9+VY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -53,11 +53,11 @@
       DTS:ObjectName="SIPP Destination">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=PE-LPALQ00139\MSSQLSERVER2012;User ID=sa;Initial Catalog=SIPP_Test;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=10.14.142.113;User ID=IMPCAdmin;Initial Catalog=SIPP-Migracion;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABPuLyRHM5jrrJAvBF/ecqWAAAAAASAAACgAAAAEAAAABog88+b3g3aEY/9SbTKQLwYAAAAaNwlo4jA6M4Pgqa7WKnAATieqjAzDAhjFAAAAEqF8N1Ao1J/fvo6gRYVe/QC9h+V</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAdp4aEfA9Qf5LuEaMfSOiJAAAAAASAAACgAAAAEAAAACxpEVXxzuFxssFYdaHZB7oYAAAAIfUSGUypvlDMBz4EfH0uQU10BIGieHXHFAAAAJs05jNy+/Hk2rPTXiRRMezzR6/R</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -73,7 +73,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Localizacion Traduccion"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -827,7 +827,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -844,7 +844,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3012,7 +3012,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3029,7 +3029,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3879,12 +3879,12 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Tables"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
-              SQLTask:SqlStatementSource="Truncate Table Migracion.Pais&#xA;GO&#xA;&#xA;Delete From Maestro.Empresa&#xA;DBCC CHECKIDENT  ('Maestro.Empresa', RESEED, 0) &#xA;GO&#xA;&#xA;Delete From Maestro.Region&#xA;DBCC CHECKIDENT  ('Maestro.Region', RESEED, 0) &#xA;GO&#xA;&#xA;Delete From Maestro.Ciudad&#xA;DBCC CHECKIDENT  ('Maestro.Ciudad', RESEED, 0) &#xA;GO&#xA;&#xA;Delete From Maestro.Pais&#xA;DBCC CHECKIDENT  ('Maestro.Pais', RESEED, 0) &#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="--Creacion de Schema&#xA;IF (NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Migracion')) &#xA;BEGIN&#xA;    EXEC ('CREATE SCHEMA [Migracion]')&#xA;END&#xA;--Agregado de Columna ETL en Tabla&#xA;IF COL_LENGTH('Maestro.Pais', 'ETL') IS NULL&#xA;BEGIN&#xA;    ALTER TABLE Maestro.Pais&#xA;&#x9;add ETL varchar(200)&#xA;END&#xA;--Creacion de Tabla Migracion&#xA;IF OBJECT_ID('Migracion.Pais') IS NOT NULL&#xA;    Truncate TABLE Migracion.Pais&#xA;else&#xA;    CREATE TABLE [Migracion].[Pais](&#xA;&#x9;[IDPAIS_BIP] [int] NULL,&#xA;&#x9;[DESCRIPCIONCORTA] [varchar](200) NULL,&#xA;&#x9;[DESCRIPCIONLARGA] [varchar](200) NULL,&#xA;&#x9;[ETL] [varchar](200) NULL,&#xA;&#x9;[IDPAIS_SIP] [int] NULL&#xA;)&#xA;&#xA;Truncate Table Migracion.Pais&#xA;GO&#xA;&#xA;Delete From Maestro.Empresa&#xA;DBCC CHECKIDENT  ('Maestro.Empresa', RESEED, 0) &#xA;GO&#xA;&#xA;Delete From Maestro.Region&#xA;DBCC CHECKIDENT  ('Maestro.Region', RESEED, 0) &#xA;GO&#xA;&#xA;Delete From Maestro.Ciudad&#xA;DBCC CHECKIDENT  ('Maestro.Ciudad', RESEED, 0) &#xA;GO&#xA;&#xA;Delete From Maestro.Pais&#xA;DBCC CHECKIDENT  ('Maestro.Pais', RESEED, 0) &#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3896,7 +3896,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Migracion Pais"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5504,7 +5504,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5521,7 +5521,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Maestro Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7943,7 +7943,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7960,7 +7960,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10150,12 +10150,12 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
-              SQLTask:SqlStatementSource="--Creacion de Schema&#xA;IF (NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Migracion')) &#xA;BEGIN&#xA;    EXEC ('CREATE SCHEMA [Migracion]')&#xA;END&#xA;--Agregado de Columna ETL en Tabla&#xA;IF COL_LENGTH('Maestro.Marca', 'ETL') IS NULL&#xA;BEGIN&#xA;    ALTER TABLE Maestro.Marca&#xA;&#x9;add ETL varchar(200)&#xA;END&#xA;--Creacion de Tabla Migracion&#xA;IF OBJECT_ID('Migracion.Marca') IS NOT NULL&#xA;    Truncate TABLE Migracion.Marca&#xA;else&#xA;    CREATE TABLE Migracion.Marca&#xA;    (&#xA;&#x9;&#x9;MarcaId_BIP&#x9;&#x9;int,&#xA;        MarcaId_SIPP      int,&#xA;&#x9;&#x9;NombreMarca&#x9;    varchar(200),&#xA;        ETL                 varchar(200)&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="--ALTER TABLE&#xA;ALTER TABLE Maestro.Marca&#xA;ALTER COLUMN AgrupacionMarcaId INT NULL;&#xA;&#xA;--Creacion de Schema&#xA;IF (NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Migracion')) &#xA;BEGIN&#xA;    EXEC ('CREATE SCHEMA [Migracion]')&#xA;END&#xA;--Agregado de Columna ETL en Tabla&#xA;IF COL_LENGTH('Maestro.Marca', 'ETL') IS NULL&#xA;BEGIN&#xA;    ALTER TABLE Maestro.Marca&#xA;&#x9;add ETL varchar(200)&#xA;END&#xA;--Creacion de Tabla Migracion&#xA;IF OBJECT_ID('Migracion.Marca') IS NOT NULL&#xA;    Truncate TABLE Migracion.Marca&#xA;else&#xA;    CREATE TABLE Migracion.Marca&#xA;    (&#xA;&#x9;&#x9;MarcaId_BIP&#x9;&#x9;int,&#xA;        MarcaId_SIPP      int,&#xA;&#x9;&#x9;NombreMarca&#x9;    varchar(200),&#xA;        ETL                 varchar(200)&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -10167,7 +10167,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10997,7 +10997,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema table"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11014,7 +11014,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion ModalidadVenta"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11872,7 +11872,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11889,7 +11889,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="2">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12720,7 +12720,7 @@ WHERE pai.IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12737,7 +12737,7 @@ WHERE pai.IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18808,12 +18808,12 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table UsuarioMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{EA61A653-1787-4BA6-AF5A-E91E50D2A38C}"
-              SQLTask:SqlStatementSource="--Creacion de Schema&#xA;IF (NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Migracion')) &#xA;BEGIN&#xA;    EXEC ('CREATE SCHEMA [Migracion]')&#xA;END&#xA;--Agregado de Columna ETL en Tabla&#xA;IF COL_LENGTH('Seguridad.UsuarioMarca', 'ETL') IS NULL&#xA;BEGIN&#xA;    ALTER TABLE Seguridad.UsuarioMarca&#xA;&#x9;add ETL varchar(200)&#xA;END&#xA;--Creacion de Tabla Migracion&#xA;IF OBJECT_ID('Migracion.UsuarioMarca') IS NOT NULL&#xA;    Truncate TABLE Migracion.UsuarioMarca&#xA;else&#xA;    CREATE TABLE Migracion.UsuarioMarca&#xA;    (&#xA;&#x9;&#x9;UsuarioMarcaId_BIP&#x9;&#x9;int,&#xA;        UsuarioMarcaId_SIPP      int,&#xA;&#x9;&#x9;NombreUsuarioMarca&#x9;    varchar(200),&#xA;        ETL                 varchar(200)&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="--Creacion de Schema&#xA;IF (NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Migracion')) &#xA;BEGIN&#xA;    EXEC ('CREATE SCHEMA [Migracion]')&#xA;END&#xA;--Agregado de Columna ETL en Tabla&#xA;IF COL_LENGTH('Maestro.Marca', 'ETL') IS NULL&#xA;BEGIN&#xA;    ALTER TABLE Maestro.Marca&#xA;&#x9;add ETL varchar(200)&#xA;END&#xA;--Creacion de Tabla Migracion&#xA;IF OBJECT_ID('Migracion.Marca') IS NOT NULL&#xA;    Truncate TABLE Migracion.Marca&#xA;else&#xA;    CREATE TABLE Migracion.Marca&#xA;    (&#xA;&#x9;&#x9;MarcaId_BIP&#x9;&#x9;int,&#xA;        MarcaId_SIPP      int,&#xA;&#x9;&#x9;NombreMarca&#x9;    varchar(200),&#xA;        ETL                 varchar(200)&#xA;    )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -18825,7 +18825,7 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion UsuarioMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18891,7 +18891,7 @@ order by UsuarioId</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Seguridad Rol"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="5">
+      DTS:ThreadHint="7">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -20137,7 +20137,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="255,249"
-          Size="255,43"
+          Size="231,43"
           Id="Package\Migracion AgrupacionMarca"
           TopLeft="751,492" />
         <NodeLayout
@@ -20183,7 +20183,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20205,16 +20207,18 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="248,246"
-          Size="178,43"
+          Size="248,43"
           Id="Package\Migracion Cargo"
-          TopLeft="1419,421" />
+          TopLeft="1436,417" />
         <NodeLayout
           Size="185,42"
           Id="Package\Migracion DBO Ciudad\Migrar Maestro Ciudad"
@@ -20246,9 +20250,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20270,16 +20272,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="257,230"
-          Size="257,43"
+          Size="207,43"
           Id="Package\Migracion DBO Ciudad"
           TopLeft="191,690" />
         <NodeLayout
@@ -20313,9 +20313,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20337,16 +20335,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="239,220"
-          Size="239,43"
+          Size="194,43"
           Id="Package\Migracion DBO Pais"
           TopLeft="820,684.5" />
         <NodeLayout
@@ -20380,9 +20376,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20404,16 +20398,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="222,250"
-          Size="222,43"
+          Size="191,43"
           Id="Package\Migracion Empresa"
           TopLeft="1463,685" />
         <NodeLayout
@@ -20447,7 +20439,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20469,7 +20463,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -20510,9 +20506,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20534,16 +20528,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="223,223"
-          Size="223,43"
+          Size="179,43"
           Id="Package\Migracion Marca"
           TopLeft="485,495" />
         <NodeLayout
@@ -20610,7 +20602,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="253,190"
-          Size="253,43"
+          Size="225,43"
           Id="Package\Migracion ModalidadVenta"
           TopLeft="473.5,413" />
         <NodeLayout
@@ -20689,7 +20681,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="301,234"
-          Size="301,43"
+          Size="269,43"
           Id="Package\Migracion TipoDocumentoIdentidad"
           TopLeft="1586,360" />
         <NodeLayout
@@ -20756,7 +20748,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="248,256"
-          Size="248,43"
+          Size="208,43"
           Id="Package\Migracion TipoNegocio"
           TopLeft="195,353" />
         <NodeLayout
@@ -20901,9 +20893,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20925,18 +20915,27 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="248,243"
-          Size="248,43"
+          Size="214,43"
           Id="Package\Migracion UsuarioMarca"
           TopLeft="556,624" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Migracion UsuarioRol\Create Schema"
+          TopLeft="41,11" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="231,113"
+          Size="231,156"
+          Id="Package\Migracion UsuarioRol"
+          TopLeft="1274,499" />
         <NodeLayout
           Size="144,42"
           Id="Package\Seguridad Rol"
@@ -20969,30 +20968,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="1536.33333333333,464">
+          TopLeft="1600,460">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9.33333333333348,117"
+              EndConnector="-54.3333333333333,121"
               Start="0,0"
-              End="9.33333333333348,109.5">
+              End="-54.3333333333333,113.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5764789192723" />
+                    End="0,56.3908541846419" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.5764789192723"
-                    Point2="0,58.5764789192723"
-                    Point3="4,58.5764789192723" />
+                    Point1="0,56.3908541846419"
+                    Point2="0,60.3908541846419"
+                    Point3="-4,60.3908541846419" />
                   <mssgle:LineSegment
-                    End="5.33333333333348,58.5764789192723" />
+                    End="-50.3333333333333,60.3908541846419" />
                   <mssgle:CubicBezierSegment
-                    Point1="5.33333333333348,58.5764789192723"
-                    Point2="9.33333333333348,58.5764789192723"
-                    Point3="9.33333333333348,62.5764789192723" />
+                    Point1="-50.3333333333333,60.3908541846419"
+                    Point2="-54.3333333333333,60.3908541846419"
+                    Point3="-54.3333333333333,64.3908541846419" />
                   <mssgle:LineSegment
-                    End="9.33333333333348,109.5" />
+                    End="-54.3333333333333,113.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21007,14 +21006,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-504,0"
+              EndConnector="-544,0"
               Start="0,0"
-              End="-496.5,0">
+              End="-536.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-496.5,0" />
+                    End="-536.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21029,9 +21028,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-42.1666666666666,-50"
+              EndConnector="-54.1666666666666,-50"
               Start="0,0"
-              End="-42.1666666666666,-42.5">
+              End="-54.1666666666666,-42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -21042,13 +21041,13 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                     Point2="0,-20.1820940819423"
                     Point3="-4,-20.1820940819423" />
                   <mssgle:LineSegment
-                    End="-38.1666666666666,-20.1820940819423" />
+                    End="-50.1666666666666,-20.1820940819423" />
                   <mssgle:CubicBezierSegment
-                    Point1="-38.1666666666666,-20.1820940819423"
-                    Point2="-42.1666666666666,-20.1820940819423"
-                    Point3="-42.1666666666666,-24.1820940819423" />
+                    Point1="-50.1666666666666,-20.1820940819423"
+                    Point2="-54.1666666666666,-20.1820940819423"
+                    Point3="-54.1666666666666,-24.1820940819423" />
                   <mssgle:LineSegment
-                    End="-42.1666666666666,-42.5" />
+                    End="-54.1666666666666,-42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21063,26 +21062,26 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-220.5,45.5"
+              EndConnector="-248.5,45.5"
               Start="0,0"
-              End="-213,45.5">
+              End="-241,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-88.8421052631579,0" />
+                    End="-100.631578947368,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-88.8421052631579,0"
-                    Point2="-92.8421052631579,0"
-                    Point3="-92.8421052631579,4" />
+                    Point1="-100.631578947368,0"
+                    Point2="-104.631578947368,0"
+                    Point3="-104.631578947368,4" />
                   <mssgle:LineSegment
-                    End="-92.8421052631579,41.5" />
+                    End="-104.631578947368,41.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-92.8421052631579,41.5"
-                    Point2="-92.8421052631579,45.5"
-                    Point3="-96.8421052631579,45.5" />
+                    Point1="-104.631578947368,41.5"
+                    Point2="-104.631578947368,45.5"
+                    Point3="-108.631578947368,45.5" />
                   <mssgle:LineSegment
-                    End="-213,45.5" />
+                    End="-241,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21093,30 +21092,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="279,396">
+          TopLeft="265.666666666667,396">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-65,41"
+              EndConnector="-51.6666666666666,41"
               Start="0,0"
-              End="-65,33.5">
+              End="-51.6666666666666,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.5576923076923" />
+                    End="0,12.587786259542" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.5576923076923"
-                    Point2="0,16.5576923076923"
-                    Point3="-4,16.5576923076923" />
+                    Point1="0,12.587786259542"
+                    Point2="0,16.587786259542"
+                    Point3="-4,16.587786259542" />
                   <mssgle:LineSegment
-                    End="-61,16.5576923076923" />
+                    End="-47.6666666666666,16.587786259542" />
                   <mssgle:CubicBezierSegment
-                    Point1="-61,16.5576923076923"
-                    Point2="-65,16.5576923076923"
-                    Point3="-65,20.5576923076923" />
+                    Point1="-47.6666666666666,16.587786259542"
+                    Point2="-51.6666666666666,16.587786259542"
+                    Point3="-51.6666666666666,20.587786259542" />
                   <mssgle:LineSegment
-                    End="-65,33.5" />
+                    End="-51.6666666666666,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21127,30 +21126,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="278,690">
+          TopLeft="261.333333333333,690">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64,-211"
+              EndConnector="-47.3333333333333,-211"
               Start="0,0"
-              End="-64,-203.5">
+              End="-47.3333333333333,-203.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-81.1832946635731" />
+                    End="0,-81.3710450623202" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-81.1832946635731"
-                    Point2="0,-85.1832946635731"
-                    Point3="-4,-85.1832946635731" />
+                    Point1="0,-81.3710450623202"
+                    Point2="0,-85.3710450623202"
+                    Point3="-4,-85.3710450623202" />
                   <mssgle:LineSegment
-                    End="-60,-85.1832946635731" />
+                    End="-43.3333333333333,-85.3710450623202" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60,-85.1832946635731"
-                    Point2="-64,-85.1832946635731"
-                    Point3="-64,-89.1832946635731" />
+                    Point1="-43.3333333333333,-85.3710450623202"
+                    Point2="-47.3333333333333,-85.3710450623202"
+                    Point3="-47.3333333333333,-89.3710450623202" />
                   <mssgle:LineSegment
-                    End="-64,-203.5" />
+                    End="-47.3333333333333,-203.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21161,18 +21160,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="598.25,456">
+          TopLeft="586,456">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="-11.5,39"
               Start="0,0"
-              End="0,31.5">
+              End="-11.5,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.5"
+                    Point2="0,19.5"
+                    Point3="-4,19.5" />
+                  <mssgle:LineSegment
+                    End="-7.5,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7.5,19.5"
+                    Point2="-11.5,19.5"
+                    Point3="-11.5,23.5" />
+                  <mssgle:LineSegment
+                    End="-11.5,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21187,14 +21198,14 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-43,0"
+              EndConnector="-87,0"
               Start="0,0"
-              End="-35.5,0">
+              End="-79.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-35.5,0" />
+                    End="-79.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21205,13 +21216,13 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="596.5,538">
+          TopLeft="574.5,538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="83.5,86"
+              EndConnector="88.5,86"
               Start="0,0"
-              End="83.5,78.5">
+              End="88.5,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -21222,13 +21233,13 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                     Point2="0,43"
                     Point3="4,43" />
                   <mssgle:LineSegment
-                    End="79.5,43" />
+                    End="84.5,43" />
                   <mssgle:CubicBezierSegment
-                    Point1="79.5,43"
-                    Point2="83.5,43"
-                    Point3="83.5,47" />
+                    Point1="84.5,43"
+                    Point2="88.5,43"
+                    Point3="88.5,47" />
                   <mssgle:LineSegment
-                    End="83.5,78.5" />
+                    End="88.5,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21243,20 +21254,26 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-140,-33.1666666666666"
+              EndConnector="-50,-54.6666666666666"
               Start="0,0"
-              End="-140,-25.6666666666666">
+              End="-42.5,-54.6666666666666">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-136,0" />
+                    End="-17.0762331838565,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-136,0"
-                    Point2="-140,0"
-                    Point3="-140,-4" />
+                    Point1="-17.0762331838565,0"
+                    Point2="-21.0762331838565,0"
+                    Point3="-21.0762331838565,-4" />
                   <mssgle:LineSegment
-                    End="-140,-25.6666666666666" />
+                    End="-21.0762331838565,-50.6666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.0762331838565,-50.6666666666666"
+                    Point2="-21.0762331838565,-54.6666666666666"
+                    Point3="-25.0762331838565,-54.6666666666666" />
+                  <mssgle:LineSegment
+                    End="-42.5,-54.6666666666666" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21267,30 +21284,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="359,396">
+          TopLeft="332.333333333333,396">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.5,144.5"
+              EndConnector="12.1666666666667,144.5"
               Start="0,0"
-              End="-14.5,137">
+              End="12.1666666666667,137">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.3557692307692" />
+                    End="0,54.4618320610687" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,54.3557692307692"
-                    Point2="0,58.3557692307692"
-                    Point3="-4,58.3557692307692" />
+                    Point1="0,54.4618320610687"
+                    Point2="0,58.4618320610687"
+                    Point3="4,58.4618320610687" />
                   <mssgle:LineSegment
-                    End="-10.5,58.3557692307692" />
+                    End="8.16666666666669,58.4618320610687" />
                   <mssgle:CubicBezierSegment
-                    Point1="-10.5,58.3557692307692"
-                    Point2="-14.5,58.3557692307692"
-                    Point3="-14.5,62.3557692307692" />
+                    Point1="8.16666666666669,58.4618320610687"
+                    Point2="12.1666666666667,58.4618320610687"
+                    Point3="12.1666666666667,62.4618320610687" />
                   <mssgle:LineSegment
-                    End="-14.5,137" />
+                    End="12.1666666666667,137" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21323,30 +21340,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 20]"
-          TopLeft="361,690">
+          TopLeft="327.666666666667,690">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16.5,-106.5"
+              EndConnector="16.8333333333334,-106.5"
               Start="0,0"
-              End="-16.5,-99">
+              End="16.8333333333334,-99">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-38.9953596287703" />
+                    End="0,-39.0901246404602" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-38.9953596287703"
-                    Point2="0,-42.9953596287703"
-                    Point3="-4,-42.9953596287703" />
+                    Point1="0,-39.0901246404602"
+                    Point2="0,-43.0901246404602"
+                    Point3="4,-43.0901246404602" />
                   <mssgle:LineSegment
-                    End="-12.5,-42.9953596287703" />
+                    End="12.8333333333334,-43.0901246404602" />
                   <mssgle:CubicBezierSegment
-                    Point1="-12.5,-42.9953596287703"
-                    Point2="-16.5,-42.9953596287703"
-                    Point3="-16.5,-46.9953596287703" />
+                    Point1="12.8333333333334,-43.0901246404602"
+                    Point2="16.8333333333334,-43.0901246404602"
+                    Point3="16.8333333333334,-47.0901246404602" />
                   <mssgle:LineSegment
-                    End="-16.5,-99" />
+                    End="16.8333333333334,-99" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21390,19 +21407,87 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="820,708.75">
+          Id="Package.PrecedenceConstraints[Constraint 22]"
+          TopLeft="1192,522">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-372,0"
+              EndConnector="82,55"
               Start="0,0"
-              End="-364.5,0">
+              End="74.5,55">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-364.5,0" />
+                    End="37,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,0"
+                    Point2="41,0"
+                    Point3="41,4" />
+                  <mssgle:LineSegment
+                    End="41,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,51"
+                    Point2="41,55"
+                    Point3="45,55" />
+                  <mssgle:LineSegment
+                    End="74.5,55" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 23]"
+          TopLeft="1520,460">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-130.5,39"
+              Start="0,0"
+              End="-130.5,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.75"
+                    Point2="0,15.75"
+                    Point3="-4,15.75" />
+                  <mssgle:LineSegment
+                    End="-126.5,15.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-126.5,15.75"
+                    Point2="-130.5,15.75"
+                    Point3="-130.5,19.75" />
+                  <mssgle:LineSegment
+                    End="-130.5,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="820,711.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-422,0"
+              Start="0,0"
+              End="-414.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-414.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21417,9 +21502,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-23.5,56.5"
+              EndConnector="-46,56.5"
               Start="0,0"
-              End="-23.5,49">
+              End="-46,49">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -21430,13 +21515,13 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                     Point2="0,28.25"
                     Point3="-4,28.25" />
                   <mssgle:LineSegment
-                    End="-19.5,28.25" />
+                    End="-42,28.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="-19.5,28.25"
-                    Point2="-23.5,28.25"
-                    Point3="-23.5,32.25" />
+                    Point1="-42,28.25"
+                    Point2="-46,28.25"
+                    Point3="-46,32.25" />
                   <mssgle:LineSegment
-                    End="-23.5,49" />
+                    End="-46,49" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21447,18 +21532,18 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="1059,706.25">
+          TopLeft="1014,706.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="404,0"
+              EndConnector="449,0"
               Start="0,0"
-              End="396.5,0">
+              End="441.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="396.5,0" />
+                    End="441.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21469,18 +21554,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="1576,685">
+          TopLeft="1558.5,685">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-62"
+              EndConnector="19.5,-62"
               Start="0,0"
-              End="0,-54.5">
+              End="19.5,-54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-54.5" />
+                    End="0,-27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-27"
+                    Point2="0,-31"
+                    Point3="4,-31" />
+                  <mssgle:LineSegment
+                    End="15.5,-31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,-31"
+                    Point2="19.5,-31"
+                    Point3="19.5,-35" />
+                  <mssgle:LineSegment
+                    End="19.5,-54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21491,7 +21588,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="1137,382.25">
+          TopLeft="1137,379.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -21513,13 +21610,13 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="1736.5,403">
+          TopLeft="1720.5,403">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-126.166666666667,178"
+              EndConnector="-110.166666666667,178"
               Start="0,0"
-              End="-126.166666666667,170.5">
+              End="-110.166666666667,170.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -21530,13 +21627,13 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                     Point2="0,105.960707269155"
                     Point3="-4,105.960707269155" />
                   <mssgle:LineSegment
-                    End="-122.166666666667,105.960707269155" />
+                    End="-106.166666666667,105.960707269155" />
                   <mssgle:CubicBezierSegment
-                    Point1="-122.166666666667,105.960707269155"
-                    Point2="-126.166666666667,105.960707269155"
-                    Point3="-126.166666666667,109.960707269155" />
+                    Point1="-106.166666666667,105.960707269155"
+                    Point2="-110.166666666667,105.960707269155"
+                    Point3="-110.166666666667,109.960707269155" />
                   <mssgle:LineSegment
-                    End="-126.166666666667,170.5" />
+                    End="-110.166666666667,170.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21551,93 +21648,26 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="282,53.5"
+              EndConnector="299,49.5"
               Start="0,0"
-              End="274.5,53.5">
+              End="291.5,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="114.736842105263,0" />
+                    End="121.894736842105,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="114.736842105263,0"
-                    Point2="118.736842105263,0"
-                    Point3="118.736842105263,4" />
+                    Point1="121.894736842105,0"
+                    Point2="125.894736842105,0"
+                    Point3="125.894736842105,4" />
                   <mssgle:LineSegment
-                    End="118.736842105263,49.5" />
+                    End="125.894736842105,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="118.736842105263,49.5"
-                    Point2="118.736842105263,53.5"
-                    Point3="122.736842105263,53.5" />
+                    Point1="125.894736842105,45.5"
+                    Point2="125.894736842105,49.5"
+                    Point3="129.894736842105,49.5" />
                   <mssgle:LineSegment
-                    End="274.5,53.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="150,42"
-          Id="Package\Migracion UsuarioRol\Create Schema"
-          TopLeft="41,11" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="False"
-          PanelSize="231,113"
-          Size="231,43"
-          Id="Package\Migracion UsuarioRol"
-          TopLeft="1274,499" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="1479.66666666667,464">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-90.1666666666667,35"
-              Start="0,0"
-              End="-90.1666666666667,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.1870824053452" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.1870824053452"
-                    Point2="0,14.1870824053452"
-                    Point3="-4,14.1870824053452" />
-                  <mssgle:LineSegment
-                    End="-86.1666666666667,14.1870824053452" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-86.1666666666667,14.1870824053452"
-                    Point2="-90.1666666666667,14.1870824053452"
-                    Point3="-90.1666666666667,18.1870824053452" />
-                  <mssgle:LineSegment
-                    End="-90.1666666666667,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="1192,521.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="82,0"
-              Start="0,0"
-              End="74.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="74.5,0" />
+                    End="291.5,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21819,7 +21849,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion Cargo\Migrar Cargo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="120,42"
           Id="Package\Migracion Cargo\Migrar Cargo\Multicast"
@@ -21855,7 +21885,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21889,7 +21921,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21923,7 +21957,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -21967,7 +22003,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion DBO Ciudad\Migrar Maestro Ciudad">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="228,42"
           Id="Package\Migracion DBO Ciudad\Migrar Maestro Ciudad\Source dbo Migracion Pais PE"
@@ -22023,9 +22059,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22059,9 +22093,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22095,9 +22127,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22131,9 +22161,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22155,9 +22183,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22209,19 +22235,19 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion DBO Pais\Migrar Pais">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="209,42"
           Id="Package\Migracion DBO Pais\Migrar Pais\Destination Migracion Pais"
           TopLeft="557,267" />
         <NodeLayout
-          Size="201,42"
-          Id="Package\Migracion DBO Pais\Migrar Pais\Destination Maestro Pais"
-          TopLeft="267,268" />
-        <NodeLayout
           Size="160,42"
           Id="Package\Migracion DBO Pais\Migrar Pais\Source dbo Pais"
           TopLeft="435,57" />
+        <NodeLayout
+          Size="201,42"
+          Id="Package\Migracion DBO Pais\Migrar Pais\Destination Maestro Pais"
+          TopLeft="267,268" />
         <NodeLayout
           Size="123,42"
           Id="Package\Migracion DBO Pais\Migrar Pais\Multicast"
@@ -22230,66 +22256,6 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           Size="161,42"
           Id="Package\Migracion DBO Pais\Migrar Pais\Data Conversion"
           TopLeft="437,129" />
-        <EdgeLayout
-          Id="Package\Migracion DBO Pais\Migrar Pais.Paths[Multicast Output 1]"
-          TopLeft="495.333333333333,239">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-127.833333333333,29"
-              Start="0,0"
-              End="-127.833333333333,21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,7.82343499197432" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,7.82343499197432"
-                    Point2="0,11.8234349919743"
-                    Point3="-4,11.8234349919743" />
-                  <mssgle:LineSegment
-                    End="-123.833333333333,11.8234349919743" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-123.833333333333,11.8234349919743"
-                    Point2="-127.833333333333,11.8234349919743"
-                    Point3="-127.833333333333,15.8234349919743" />
-                  <mssgle:LineSegment
-                    End="-127.833333333333,21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Migracion DBO Pais\Migrar Pais.Paths[Data Conversion Output]"
-          TopLeft="516,171">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Migracion DBO Pais\Migrar Pais.Paths[OLE DB Source Output]"
           TopLeft="516.25,99">
@@ -22309,9 +22275,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22345,16 +22309,70 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migracion DBO Pais\Migrar Pais.Paths[Multicast Output 1]"
+          TopLeft="495.333333333333,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-127.833333333333,29"
+              Start="0,0"
+              End="-127.833333333333,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.82343499197432" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.82343499197432"
+                    Point2="0,11.8234349919743"
+                    Point3="-4,11.8234349919743" />
+                  <mssgle:LineSegment
+                    End="-123.833333333333,11.8234349919743" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-123.833333333333,11.8234349919743"
+                    Point2="-127.833333333333,11.8234349919743"
+                    Point3="-127.833333333333,15.8234349919743" />
+                  <mssgle:LineSegment
+                    End="-127.833333333333,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migracion DBO Pais\Migrar Pais.Paths[Data Conversion Output]"
+          TopLeft="516,171">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Migracion DBO Pais\Migrar Pais\Destination Migracion Pais">
+    design-time-name="Package\Migracion DBO Pais\Migrar Pais\Destination Maestro Pais">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -22367,7 +22385,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Migracion DBO Pais\Migrar Pais\Destination Maestro Pais">
+    design-time-name="Package\Migracion DBO Pais\Migrar Pais\Destination Migracion Pais">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -22391,7 +22409,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion Empresa\Migrar Empresa">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,42"
           Id="Package\Migracion Empresa\Migrar Empresa\Multicast"
@@ -22447,9 +22465,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22483,9 +22499,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22513,9 +22527,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22543,9 +22555,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22567,9 +22577,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22626,7 +22634,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion Encuesta Periodo\Migracion Periodo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160,42"
           Id="Package\Migracion Encuesta Periodo\Migracion Periodo\Migracion Ciudad"
@@ -22682,7 +22690,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22704,7 +22714,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22738,7 +22750,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22772,7 +22786,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22806,7 +22822,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22840,7 +22858,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22862,7 +22882,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22884,7 +22906,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22944,7 +22968,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion Marca\Migracion Marca">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="208,42"
           Id="Package\Migracion Marca\Migracion Marca\Migracion AgrupacionMarca"
@@ -23012,9 +23036,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23048,9 +23070,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23084,9 +23104,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23120,9 +23138,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23156,9 +23172,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23180,9 +23194,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23204,9 +23216,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23228,9 +23238,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -24799,7 +24807,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Seguridad UsuarioAtributo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Seguridad UsuarioAtributo\OLE DB Destination"
@@ -24839,9 +24847,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
