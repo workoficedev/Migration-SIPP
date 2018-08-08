@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="194"
-  DTS:VersionGUID="{4B6C2638-76FD-4588-AE75-4758DB342F9B}">
+  DTS:VersionBuild="198"
+  DTS:VersionGUID="{4BFFE8D7-1097-4AA4-97D9-47B3048838B2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAJKOL65RYKEObz9j74NZI7AAAAAASAAACgAAAAEAAAAGNewl7hpVnQMS2YVI4IJMsYAAAA2v/732bcwSoggNKxKKSuzdgWbr4Miv7yFAAAAPUBfmeFddJcz6ZlFhrJ7d6L6ovS</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA7Cax2oqFq012CWZ55jKxvAAAAAASAAACgAAAAEAAAAKLlYBBhvxEMwmUNOHKraaMYAAAAqDXAfUiEOTerwTP6u/jNJkoa7QYc5iTwFAAAAH8pYLSAE+HThi0SlbGp3HqXvCP+</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB1KlDBAE+OdVNRlOd2XV4jAAAAAASAAACgAAAAEAAAAMw5Cec16nqw36r6aW2WBscYAAAADhrH0kGfGUU8m8ESpv1JmZ1GhIYbV0qUFAAAAPWueb5DWwwCaf8w9QXao5iPtt6Y</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABrXgNCgV0M/ShjrF5OKWHiAAAAAASAAACgAAAAEAAAAF6Av8/WsY1P/cyGaHhBQQAYAAAA0KRSrYT4mIhxo+hdHbozrqfaJh93igEPFAAAAL7TQ7GfVD/7kc0zGRFjaljHj8T1</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAZtMAh+d9yDKNj+ktLasFEAAAAAASAAACgAAAAEAAAAKIX2KO94tQewBT4+GhyvnwYAAAAGaNaWq8fRZwsH3VK6XjlYXIuKmMNlvHWFAAAAK3YSgp0na1QrsaNzTc+hQ0wTCVQ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABofXKM+u9ePgJithabXtNBAAAAAASAAACgAAAAEAAAAGFKLXwcCZYECwfXkj9ueLgYAAAA2qbNvnoP7Pk0Bm388QPnZymkTVrUZIFdFAAAAL2nwd0la/ClMRIobyo+LNv0+GOo</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1138,6 +1138,317 @@ from cteAgrupacionMarca where orden = 1</property>
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Migracion Cargo\Migrar Cargo\Merge Join"
+                  componentClassID="Microsoft.MergeJoin"
+                  contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+                  name="Merge Join"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of join to perform."
+                      name="JoinType"
+                      typeConverter="JoinType">2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of columns in the ordering key."
+                      name="NumKeyColumns">1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the null values are treated as equal values."
+                      name="TreatNullsAsEqual">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Indicates the requested maximum buffers per input before blocking."
+                      name="MaxBuffersPerInput">5</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Left Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionLarga]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="70"
+                          cachedName="DescripcionLarga"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLarga]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionCorta]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="DescripcionCorta"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCorta]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[Abreviatura]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="Abreviatura"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[Abreviatura]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionCortaTraduccionId]"
+                          cachedDataType="i4"
+                          cachedName="DescripcionCortaTraduccionId"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCortaTraduccionId]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionLargaTraduccionId]"
+                          cachedDataType="i4"
+                          cachedName="DescripcionLargaTraduccionId"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLargaTraduccionId]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[EsActivo]"
+                          cachedDataType="i4"
+                          cachedName="EsActivo"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[EsActivo]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdCreacion]"
+                          cachedDataType="i4"
+                          cachedName="UsuarioIdCreacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[UsuarioIdCreacion]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaCreacion]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FechaCreacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[FechaCreacion]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdActualizacion]"
+                          cachedDataType="i4"
+                          cachedName="UsuarioIdActualizacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[UsuarioIdActualizacion]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaActualizacion]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FechaActualizacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[FechaActualizacion]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[Eliminado]"
+                          cachedDataType="i4"
+                          cachedName="Eliminado"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[Eliminado]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[ETL]"
+                          cachedDataType="guid"
+                          cachedName="ETL"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[ETL]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Right Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input].Columns[DescripcionLarga]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="70"
+                          cachedName="DescripcionLarga"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input].Columns[CargoId_BIP]"
+                          cachedDataType="i4"
+                          cachedName="CargoId_BIP"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_BIP]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output]"
+                      isSorted="true"
+                      name="Merge Join Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionCorta]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionCorta]"
+                          name="DescripcionCorta">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionCorta]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLarga]"
+                          codePage="1252"
+                          dataType="str"
+                          length="70"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLarga]"
+                          name="DescripcionLarga"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionLarga]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[Abreviatura]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[Abreviatura]"
+                          name="Abreviatura">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[Abreviatura]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionCortaTraduccionId]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionCortaTraduccionId]"
+                          name="DescripcionCortaTraduccionId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionCortaTraduccionId]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLargaTraduccionId]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLargaTraduccionId]"
+                          name="DescripcionLargaTraduccionId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionLargaTraduccionId]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[EsActivo]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[EsActivo]"
+                          name="EsActivo">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[EsActivo]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdCreacion]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdCreacion]"
+                          name="UsuarioIdCreacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdCreacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[FechaCreacion]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[FechaCreacion]"
+                          name="FechaCreacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaCreacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdActualizacion]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdActualizacion]"
+                          name="UsuarioIdActualizacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdActualizacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[FechaActualizacion]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[FechaActualizacion]"
+                          name="FechaActualizacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaActualizacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[Eliminado]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[Eliminado]"
+                          name="Eliminado">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[Eliminado]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[ETL]"
+                          dataType="guid"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[ETL]"
+                          name="ETL">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[ETL]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[CargoId_BIP]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[CargoId_BIP]"
+                          name="CargoId_BIP">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input].Columns[CargoId_BIP]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1214,21 +1525,22 @@ from cteAgrupacionMarca where orden = 1</property>
                           cachedDataType="i4"
                           cachedName="CargoId_BIP"
                           externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input].ExternalColumns[CargoId_BIP]"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId_BIP]" />
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[CargoId_BIP]" />
                         <inputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input].Columns[ETL]"
                           cachedDataType="guid"
                           cachedName="ETL"
                           externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input].ExternalColumns[ETL]"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ETL]" />
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[ETL]" />
                         <inputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input].Columns[DescripcionLarga]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="70"
                           cachedName="DescripcionLarga"
+                          cachedSortKeyPosition="1"
                           externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input].ExternalColumns[NombreCargo]"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLarga]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -1302,17 +1614,17 @@ from cteAgrupacionMarca where orden = 1</property>
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 2]"
+                      refId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 3]"
                       deleteOutputOnPathDetached="true"
-                      name="Multicast Output 2"
+                      name="Multicast Output 3"
                       synchronousInputId="Package\Migracion Cargo\Migrar Cargo\Multicast.Inputs[Multicast Input 1]">
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 3]"
+                      refId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 2]"
                       dangling="true"
                       deleteOutputOnPathDetached="true"
-                      name="Multicast Output 3"
+                      name="Multicast Output 2"
                       synchronousInputId="Package\Migracion Cargo\Migrar Cargo\Multicast.Inputs[Multicast Input 1]">
                       <externalMetadataColumns />
                     </output>
@@ -1344,20 +1656,20 @@ from cteAgrupacionMarca where orden = 1</property>
                       description="The SQL command to be executed."
                       name="SqlCommand"
                       UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
-IdParametro as CargoId_BIP,
 DescripcionCorta,
 DescripcionLarga,
 DescripcionCorta as Abreviatura,
 1 as DescripcionCortaTraduccionId,
 1 as DescripcionLargaTraduccionId,
-Estado as EsActivo,
+1 as EsActivo,
 1 as UsuarioIdCreacion,
 GETDATE() as FechaCreacion,
 1 as UsuarioIdActualizacion,
 GETDATE() as FechaActualizacion,
 0 as Eliminado,
 Newid() as ETL
-from dbo.cargo</property>
+from dbo.cargo
+group by DESCRIPCIONLARGA, DESCRIPCIONCORTA</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -1393,15 +1705,6 @@ from dbo.cargo</property>
                       refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output]"
                       name="OLE DB Source Output">
                       <outputColumns>
-                        <outputColumn
-                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
-                          name="CargoId_BIP"
-                          truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]"
                           codePage="1252"
@@ -1520,10 +1823,6 @@ from dbo.cargo</property>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
-                          dataType="i4"
-                          name="CargoId_BIP" />
-                        <externalMetadataColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DescripcionCorta]"
                           codePage="1252"
                           dataType="str"
@@ -1584,11 +1883,6 @@ from dbo.cargo</property>
                       isErrorOut="true"
                       name="OLE DB Source Error Output">
                       <outputColumns>
-                        <outputColumn
-                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
-                          dataType="i4"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
-                          name="CargoId_BIP" />
                         <outputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
                           codePage="1252"
@@ -1672,23 +1966,573 @@ from dbo.cargo</property>
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source 1"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+IdParametro as CargoId_BIP,
+DescripcionLarga
+from dbo.cargo
+order by DESCRIPCIONLARGA asc</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[BIP SIAP Source]"
+                      connectionManagerRefId="Package.ConnectionManagers[BIP SIAP Source]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output]"
+                      isSorted="true"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
+                          name="CargoId_BIP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                          length="70"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
+                          name="DescripcionLarga"
+                          sortKeyPosition="1"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
+                          dataType="i4"
+                          name="CargoId_BIP" />
+                        <externalMetadataColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[DescripcionLarga]"
+                          codePage="1252"
+                          dataType="str"
+                          length="70"
+                          name="DescripcionLarga" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
+                          name="CargoId_BIP" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                          codePage="1252"
+                          dataType="str"
+                          length="70"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
+                          name="DescripcionLarga" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Migracion Cargo\Migrar Cargo\Sort"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[DescripcionCorta]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="DescripcionCorta"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[DescripcionLarga]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="70"
+                          cachedName="DescripcionLarga"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[Abreviatura]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="Abreviatura"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[DescripcionCortaTraduccionId]"
+                          cachedDataType="i4"
+                          cachedName="DescripcionCortaTraduccionId"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[DescripcionLargaTraduccionId]"
+                          cachedDataType="i4"
+                          cachedName="DescripcionLargaTraduccionId"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[EsActivo]"
+                          cachedDataType="i4"
+                          cachedName="EsActivo"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[UsuarioIdCreacion]"
+                          cachedDataType="i4"
+                          cachedName="UsuarioIdCreacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[FechaCreacion]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FechaCreacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[UsuarioIdActualizacion]"
+                          cachedDataType="i4"
+                          cachedName="UsuarioIdActualizacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[FechaActualizacion]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FechaActualizacion"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[Eliminado]"
+                          cachedDataType="i4"
+                          cachedName="Eliminado"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[ETL]"
+                          cachedDataType="guid"
+                          cachedName="ETL"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ETL]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCorta]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCorta]"
+                          name="DescripcionCorta">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCorta]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLarga]"
+                          codePage="1252"
+                          dataType="str"
+                          length="70"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLarga]"
+                          name="DescripcionLarga"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLarga]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[Abreviatura]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[Abreviatura]"
+                          name="Abreviatura">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Abreviatura]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCortaTraduccionId]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCortaTraduccionId]"
+                          name="DescripcionCortaTraduccionId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionCortaTraduccionId]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLargaTraduccionId]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLargaTraduccionId]"
+                          name="DescripcionLargaTraduccionId">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DescripcionLargaTraduccionId]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[EsActivo]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[EsActivo]"
+                          name="EsActivo">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EsActivo]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[UsuarioIdCreacion]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[UsuarioIdCreacion]"
+                          name="UsuarioIdCreacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[FechaCreacion]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[FechaCreacion]"
+                          name="FechaCreacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[UsuarioIdActualizacion]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[UsuarioIdActualizacion]"
+                          name="UsuarioIdActualizacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[FechaActualizacion]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[FechaActualizacion]"
+                          name="FechaActualizacion">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[Eliminado]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[Eliminado]"
+                          name="Eliminado">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[ETL]"
+                          dataType="guid"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[ETL]"
+                          name="ETL">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ETL]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
               <paths>
+                <path
+                  refId="Package\Migracion Cargo\Migrar Cargo.Paths[Merge Join Output]"
+                  endId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input]"
+                  name="Merge Join Output"
+                  startId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Migracion Cargo\Migrar Cargo.Paths[Multicast Output 1]"
                   endId="Package\Migracion Cargo\Migrar Cargo\Maestro Cargo.Inputs[OLE DB Destination Input]"
                   name="Multicast Output 1"
                   startId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 1]" />
                 <path
-                  refId="Package\Migracion Cargo\Migrar Cargo.Paths[Multicast Output 2]"
-                  endId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input]"
-                  name="Multicast Output 2"
-                  startId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 2]" />
+                  refId="Package\Migracion Cargo\Migrar Cargo.Paths[Multicast Output 3]"
+                  endId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input]"
+                  name="Multicast Output 3"
+                  startId="Package\Migracion Cargo\Migrar Cargo\Multicast.Outputs[Multicast Output 3]" />
                 <path
                   refId="Package\Migracion Cargo\Migrar Cargo.Paths[OLE DB Source Output]"
                   endId="Package\Migracion Cargo\Migrar Cargo\Multicast.Inputs[Multicast Input 1]"
                   name="OLE DB Source Output"
                   startId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Migracion Cargo\Migrar Cargo.Paths[OLE DB Source Output1]"
+                  endId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Migracion Cargo\Migrar Cargo.Paths[Sort Output]"
+                  endId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -18857,6 +19701,7 @@ order by UsuarioId</property>
       DTS:refId="Package\Migracion UsuarioRol"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
+      DTS:Disabled="True"
       DTS:DTSID="{30A3207B-EDCE-4807-8250-68E846320987}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -18939,6 +19784,508 @@ order by UsuarioId</property>
           version="1">
           <components>
             <component
+              refId="Package\Seguridad UsuarioAtributo\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[CargoId_BIP]"
+                      cachedDataType="i4"
+                      cachedName="CargoId_BIP"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId_BIP]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioId]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioId"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioId]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[EmpresaId]"
+                      cachedDataType="i4"
+                      cachedName="EmpresaId"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmpresaId]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[Nombres]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Nombres"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombres]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[ApellidoPaterno]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="ApellidoPaterno"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ApellidoPaterno]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[ApellidoMaterno]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="ApellidoMaterno"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ApellidoMaterno]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[TipoDocumentoIdentidadId]"
+                      cachedDataType="i4"
+                      cachedName="TipoDocumentoIdentidadId"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoDocumentoIdentidadId]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[NumeroDocumentoIdentidad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="NumeroDocumentoIdentidad"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroDocumentoIdentidad]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[DIRECCION]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="DIRECCION"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIRECCION]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FECHAINGRESO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHAINGRESO"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHAINGRESO]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FECHARETIRO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHARETIRO"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHARETIRO]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FECHANACIMIENTO]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHANACIMIENTO"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHANACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[CODIGOLEGAL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="CODIGOLEGAL"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CODIGOLEGAL]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[OBSERVACIONES]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="OBSERVACIONES"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[OBSERVACIONES]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[TELEFONO1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TELEFONO1"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[TELEFONO1]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[TELEFONO2]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="TELEFONO2"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[TELEFONO2]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[EMAIL]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EMAIL"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdCreacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdCreacion"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaCreacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaCreacion"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdActualizacion]"
+                      cachedDataType="i4"
+                      cachedName="UsuarioIdActualizacion"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaActualizacion]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FechaActualizacion"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[Eliminado]"
+                      cachedDataType="i4"
+                      cachedName="Eliminado"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Right Input].Columns[CargoId_BIP]"
+                      cachedDataType="i4"
+                      cachedName="CargoId_BIP"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_BIP]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Right Input].Columns[CargoId_SIPP]"
+                      cachedDataType="i4"
+                      cachedName="CargoId_SIPP"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_SIPP]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioId]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioId]"
+                      name="UsuarioId">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[EmpresaId]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[EmpresaId]"
+                      name="EmpresaId">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[EmpresaId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[Nombres]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[Nombres]"
+                      name="Nombres">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[Nombres]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[ApellidoPaterno]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[ApellidoPaterno]"
+                      name="ApellidoPaterno">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[ApellidoPaterno]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[ApellidoMaterno]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[ApellidoMaterno]"
+                      name="ApellidoMaterno">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[ApellidoMaterno]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TipoDocumentoIdentidadId]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TipoDocumentoIdentidadId]"
+                      name="TipoDocumentoIdentidadId">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[TipoDocumentoIdentidadId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[NumeroDocumentoIdentidad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[NumeroDocumentoIdentidad]"
+                      name="NumeroDocumentoIdentidad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[NumeroDocumentoIdentidad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[DIRECCION]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[DIRECCION]"
+                      name="DIRECCION">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[DIRECCION]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHAINGRESO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHAINGRESO]"
+                      name="FECHAINGRESO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FECHAINGRESO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHARETIRO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHARETIRO]"
+                      name="FECHARETIRO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FECHARETIRO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHANACIMIENTO]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHANACIMIENTO]"
+                      name="FECHANACIMIENTO">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FECHANACIMIENTO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[CODIGOLEGAL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[CODIGOLEGAL]"
+                      name="CODIGOLEGAL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[CODIGOLEGAL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[OBSERVACIONES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[OBSERVACIONES]"
+                      name="OBSERVACIONES">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[OBSERVACIONES]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO1]"
+                      name="TELEFONO1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[TELEFONO1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO2]"
+                      name="TELEFONO2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[TELEFONO2]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]"
+                      name="EMAIL">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[EMAIL]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdCreacion]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdCreacion]"
+                      name="UsuarioIdCreacion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdCreacion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FechaCreacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FechaCreacion]"
+                      name="FechaCreacion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaCreacion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdActualizacion]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdActualizacion]"
+                      name="UsuarioIdActualizacion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[UsuarioIdActualizacion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FechaActualizacion]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FechaActualizacion]"
+                      name="FechaActualizacion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[FechaActualizacion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[Eliminado]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[Eliminado]"
+                      name="Eliminado">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input].Columns[Eliminado]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[CargoId_SIPP]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[CargoId_SIPP]"
+                      name="CargoId_SIPP">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Right Input].Columns[CargoId_SIPP]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Seguridad UsuarioAtributo\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -19015,13 +20362,13 @@ order by UsuarioId</property>
                       cachedDataType="i4"
                       cachedName="UsuarioId"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioId]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioId]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioId]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EmpresaId]"
                       cachedDataType="i4"
                       cachedName="EmpresaId"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EmpresaId]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmpresaId]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[EmpresaId]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nombres]"
                       cachedCodepage="1252"
@@ -19029,7 +20376,7 @@ order by UsuarioId</property>
                       cachedLength="50"
                       cachedName="Nombres"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nombres]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombres]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[Nombres]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ApellidoPaterno]"
                       cachedCodepage="1252"
@@ -19037,7 +20384,7 @@ order by UsuarioId</property>
                       cachedLength="30"
                       cachedName="ApellidoPaterno"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ApellidoPaterno]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ApellidoPaterno]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[ApellidoPaterno]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ApellidoMaterno]"
                       cachedCodepage="1252"
@@ -19045,13 +20392,13 @@ order by UsuarioId</property>
                       cachedLength="30"
                       cachedName="ApellidoMaterno"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ApellidoMaterno]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ApellidoMaterno]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[ApellidoMaterno]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TipoDocumentoIdentidadId]"
                       cachedDataType="i4"
                       cachedName="TipoDocumentoIdentidadId"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoDocumentoIdentidadId]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoDocumentoIdentidadId]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TipoDocumentoIdentidadId]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NumeroDocumentoIdentidad]"
                       cachedCodepage="1252"
@@ -19059,13 +20406,7 @@ order by UsuarioId</property>
                       cachedLength="15"
                       cachedName="NumeroDocumentoIdentidad"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NumeroDocumentoIdentidad]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroDocumentoIdentidad]" />
-                    <inputColumn
-                      refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CargoId]"
-                      cachedDataType="i4"
-                      cachedName="CargoId"
-                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CargoId]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[NumeroDocumentoIdentidad]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DIRECCION]"
                       cachedCodepage="1252"
@@ -19073,25 +20414,25 @@ order by UsuarioId</property>
                       cachedLength="200"
                       cachedName="DIRECCION"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Direccion]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIRECCION]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[DIRECCION]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FECHAINGRESO]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FECHAINGRESO"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaIngreso]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHAINGRESO]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHAINGRESO]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FECHARETIRO]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FECHARETIRO"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaRetiro]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHARETIRO]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHARETIRO]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FECHANACIMIENTO]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FECHANACIMIENTO"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaNacimiento]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHANACIMIENTO]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FECHANACIMIENTO]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CODIGOLEGAL]"
                       cachedCodepage="1252"
@@ -19099,7 +20440,7 @@ order by UsuarioId</property>
                       cachedLength="15"
                       cachedName="CODIGOLEGAL"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CodigoLegal]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CODIGOLEGAL]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[CODIGOLEGAL]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OBSERVACIONES]"
                       cachedCodepage="1252"
@@ -19107,7 +20448,7 @@ order by UsuarioId</property>
                       cachedLength="100"
                       cachedName="OBSERVACIONES"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Observaciones]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[OBSERVACIONES]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[OBSERVACIONES]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TELEFONO1]"
                       cachedCodepage="1252"
@@ -19115,7 +20456,7 @@ order by UsuarioId</property>
                       cachedLength="20"
                       cachedName="TELEFONO1"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Telefono1]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[TELEFONO1]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO1]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TELEFONO2]"
                       cachedCodepage="1252"
@@ -19123,7 +20464,7 @@ order by UsuarioId</property>
                       cachedLength="20"
                       cachedName="TELEFONO2"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Telefono2]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[TELEFONO2]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO2]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EMAIL]"
                       cachedCodepage="1252"
@@ -19131,37 +20472,43 @@ order by UsuarioId</property>
                       cachedLength="50"
                       cachedName="EMAIL"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[EMAIL]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdCreacion]"
                       cachedDataType="i4"
                       cachedName="UsuarioIdCreacion"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdCreacion]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdCreacion]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdCreacion]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaCreacion]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FechaCreacion"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaCreacion]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaCreacion]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FechaCreacion]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UsuarioIdActualizacion]"
                       cachedDataType="i4"
                       cachedName="UsuarioIdActualizacion"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UsuarioIdActualizacion]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[UsuarioIdActualizacion]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[UsuarioIdActualizacion]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaActualizacion]"
                       cachedDataType="dbTimeStamp"
                       cachedName="FechaActualizacion"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaActualizacion]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[FechaActualizacion]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[FechaActualizacion]" />
                     <inputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Eliminado]"
                       cachedDataType="i4"
                       cachedName="Eliminado"
                       externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eliminado]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]" />
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[Eliminado]" />
+                    <inputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CargoId_SIPP]"
+                      cachedDataType="i4"
+                      cachedName="CargoId_SIPP"
+                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CargoId]"
+                      lineageId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output].Columns[CargoId_SIPP]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -19338,7 +20685,7 @@ dem.ApellidoPaterno,
 dem.ApellidoMaterno,
 td.TipoDocumentoIdentidadId,
 dem.NRODOCUMENTOIDENTIDAD as NumeroDocumentoIdentidad,
-ca.CargoId,
+ca.CargoId as CargoId_BIP,
 dem.DIRECCION,
 dem.FECHAINGRESO,
 dem.FECHARETIRO,
@@ -19357,7 +20704,8 @@ from dbo.empleado dem
 inner join mig.usuario mu on dem.idempleado = mu.UsuarioId_BIP
 inner join mig.empresa me on dem.idempresa = me.empresaid_bip
 inner join mig.tipodocumento td on dem.PARAMETROTIPODOCUMENTOIDENTIDAD = td.TipoDocumentoIdentidadId_BIP
-inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
+inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP
+order by ca.CargoId asc</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -19391,6 +20739,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
               <outputs>
                 <output
                   refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output]"
+                  isSorted="true"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
@@ -19463,15 +20812,6 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                       length="15"
                       lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[NumeroDocumentoIdentidad]"
                       name="NumeroDocumentoIdentidad"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CargoId]"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId]"
-                      name="CargoId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIRECCION]"
@@ -19611,6 +20951,16 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                       lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[Eliminado]"
                       name="Eliminado"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
+                      name="CargoId_BIP"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -19650,10 +21000,6 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                       dataType="str"
                       length="15"
                       name="NumeroDocumentoIdentidad" />
-                    <externalMetadataColumn
-                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CargoId]"
-                      dataType="i4"
-                      name="CargoId" />
                     <externalMetadataColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DIRECCION]"
                       codePage="1252"
@@ -19722,6 +21068,10 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Eliminado]"
                       dataType="i4"
                       name="Eliminado" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
+                      dataType="i4"
+                      name="CargoId_BIP" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -19773,10 +21123,10 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                       lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NumeroDocumentoIdentidad]"
                       name="NumeroDocumentoIdentidad" />
                     <outputColumn
-                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CargoId]"
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
                       dataType="i4"
-                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CargoId]"
-                      name="CargoId" />
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
+                      name="CargoId_BIP" />
                     <outputColumn
                       refId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DIRECCION]"
                       codePage="1252"
@@ -19876,11 +21226,196 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Migracion.Cargo
+order by CargoId_BIP asc</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SIPP Destination]"
+                  connectionManagerRefId="Package.ConnectionManagers[SIPP Destination]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output]"
+                  isSorted="true"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_BIP]"
+                      name="CargoId_BIP"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_SIPP]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CargoId_SIPP]"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CargoId_SIPP]"
+                      name="CargoId_SIPP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[NombreCargo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[NombreCargo]"
+                      length="200"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[NombreCargo]"
+                      name="NombreCargo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[ETL]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[ETL]"
+                      length="200"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[ETL]"
+                      name="ETL"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CargoId_BIP]"
+                      dataType="i4"
+                      name="CargoId_BIP" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CargoId_SIPP]"
+                      dataType="i4"
+                      name="CargoId_SIPP" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[NombreCargo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="NombreCargo" />
+                    <externalMetadataColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[ETL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="ETL" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
+                      name="CargoId_BIP" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_SIPP]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_SIPP]"
+                      name="CargoId_SIPP" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[NombreCargo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[NombreCargo]"
+                      name="NombreCargo" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ETL]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ETL]"
+                      name="ETL" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
-              refId="Package\Seguridad UsuarioAtributo.Paths[OLE DB Source Output]"
+              refId="Package\Seguridad UsuarioAtributo.Paths[Merge Join Output]"
               endId="Package\Seguridad UsuarioAtributo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Seguridad UsuarioAtributo\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Seguridad UsuarioAtributo.Paths[OLE DB Source Output1]"
+              endId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Right Input]"
+              name="OLE DB Source Output"
+              startId="Package\Seguridad UsuarioAtributo\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Seguridad UsuarioAtributo.Paths[OLE DB Source Output]"
+              endId="Package\Seguridad UsuarioAtributo\Merge Join.Inputs[Merge Join Left Input]"
               name="OLE DB Source Output"
               startId="Package\Seguridad UsuarioAtributo\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -20235,9 +21770,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="True"
+          IsExpanded="False"
           PanelSize="248,246"
-          Size="248,289"
+          Size="178,43"
           Id="Package\Migracion Cargo"
           TopLeft="1436,417" />
         <NodeLayout
@@ -21009,30 +22544,18 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="1560,706">
+          TopLeft="1549.5,460">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.3333333333333,-125"
+              EndConnector="0,121"
               Start="0,0"
-              End="-14.3333333333333,-117.5">
+              End="0,113.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-70.4106090373281" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-70.4106090373281"
-                    Point2="0,-74.4106090373281"
-                    Point3="-4,-74.4106090373281" />
-                  <mssgle:LineSegment
-                    End="-10.3333333333333,-74.4106090373281" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.3333333333333,-74.4106090373281"
-                    Point2="-14.3333333333333,-74.4106090373281"
-                    Point3="-14.3333333333333,-78.4106090373281" />
-                  <mssgle:LineSegment
-                    End="-14.3333333333333,-117.5" />
+                    End="0,113.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21471,24 +22994,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="1436,608.333333333333">
+          TopLeft="1496.66666666667,460">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-37,-109.333333333333"
+              EndConnector="-97.6666666666667,39"
               Start="0,0"
-              End="-37,-101.833333333333">
+              End="-97.6666666666667,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-33,0" />
+                    End="0,11.8084632516704" />
                   <mssgle:CubicBezierSegment
-                    Point1="-33,0"
-                    Point2="-37,0"
-                    Point3="-37,-4" />
+                    Point1="0,11.8084632516704"
+                    Point2="0,15.8084632516704"
+                    Point3="-4,15.8084632516704" />
                   <mssgle:LineSegment
-                    End="-37,-101.833333333333" />
+                    End="-93.6666666666667,15.8084632516704" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-93.6666666666667,15.8084632516704"
+                    Point2="-97.6666666666667,15.8084632516704"
+                    Point3="-97.6666666666667,19.8084632516704" />
+                  <mssgle:LineSegment
+                    End="-97.6666666666667,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21671,26 +23200,26 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="299,125.666666666667"
+              EndConnector="299,49.5"
               Start="0,0"
-              End="291.5,125.666666666667">
+              End="291.5,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="150.974144373038,0" />
+                    End="121.894736842105,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="150.974144373038,0"
-                    Point2="154.974144373038,0"
-                    Point3="154.974144373038,4" />
+                    Point1="121.894736842105,0"
+                    Point2="125.894736842105,0"
+                    Point3="125.894736842105,4" />
                   <mssgle:LineSegment
-                    End="154.974144373038,121.666666666667" />
+                    End="125.894736842105,45.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="154.974144373038,121.666666666667"
-                    Point2="154.974144373038,125.666666666667"
-                    Point3="158.974144373038,125.666666666667" />
+                    Point1="125.894736842105,45.5"
+                    Point2="125.894736842105,49.5"
+                    Point3="129.894736842105,49.5" />
                   <mssgle:LineSegment
-                    End="291.5,125.666666666667" />
+                    End="291.5,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21872,11 +23401,11 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Migracion Cargo\Migrar Cargo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,42"
           Id="Package\Migracion Cargo\Migrar Cargo\Multicast"
-          TopLeft="246,120" />
+          TopLeft="253,119" />
         <NodeLayout
           Size="150,42"
           Id="Package\Migracion Cargo\Migrar Cargo\OLE DB Source"
@@ -21884,59 +23413,25 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         <NodeLayout
           Size="155,42"
           Id="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo"
-          TopLeft="334,196" />
+          TopLeft="597,214" />
         <NodeLayout
           Size="147,42"
           Id="Package\Migracion Cargo\Migrar Cargo\Maestro Cargo"
           TopLeft="149,196" />
         <EdgeLayout
           Id="Package\Migracion Cargo\Migrar Cargo.Paths[OLE DB Source Output]"
-          TopLeft="307.5,81">
+          TopLeft="311,81">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,31.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Migracion Cargo\Migrar Cargo.Paths[Multicast Output 2]"
-          TopLeft="324.666666666667,162">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86.8333333333334,34"
-              Start="0,0"
-              End="86.8333333333334,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.86842105263159" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.86842105263159"
-                    Point2="0,13.8684210526316"
-                    Point3="4,13.8684210526316" />
-                  <mssgle:LineSegment
-                    End="82.8333333333334,13.8684210526316" />
-                  <mssgle:CubicBezierSegment
-                    Point1="82.8333333333334,13.8684210526316"
-                    Point2="86.8333333333334,13.8684210526316"
-                    Point3="86.8333333333334,17.8684210526316" />
-                  <mssgle:LineSegment
-                    End="86.8333333333334,26.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -21947,30 +23442,142 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Migracion Cargo\Migrar Cargo.Paths[Multicast Output 1]"
-          TopLeft="306,162">
+          TopLeft="313,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-83.5,34"
+              EndConnector="-90.5,35"
               Start="0,0"
-              End="-83.5,26.5">
+              End="-90.5,27.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13" />
+                    End="0,13.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13"
-                    Point2="0,17"
-                    Point3="-4,17" />
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="-4,17.5" />
                   <mssgle:LineSegment
-                    End="-79.5,17" />
+                    End="-86.5,17.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-79.5,17"
-                    Point2="-83.5,17"
-                    Point3="-83.5,21" />
+                    Point1="-86.5,17.5"
+                    Point2="-90.5,17.5"
+                    Point3="-90.5,21.5" />
                   <mssgle:LineSegment
-                    End="-83.5,26.5" />
+                    End="-90.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1"
+          TopLeft="572,40" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Migracion Cargo\Migrar Cargo\Sort"
+          TopLeft="431,119" />
+        <EdgeLayout
+          Id="Package\Migracion Cargo\Migrar Cargo.Paths[Multicast Output 3]"
+          TopLeft="373,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58,0"
+              Start="0,0"
+              End="50.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Migracion Cargo\Migrar Cargo\Merge Join"
+          TopLeft="590,118" />
+        <EdgeLayout
+          Id="Package\Migracion Cargo\Migrar Cargo.Paths[Sort Output]"
+          TopLeft="529,139.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61,0"
+              Start="0,0"
+              End="53.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migracion Cargo\Migrar Cargo.Paths[OLE DB Source Output1]"
+          TopLeft="653.25,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Migracion Cargo\Migrar Cargo.Paths[Merge Join Output]"
+          TopLeft="655,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5,54"
+              Start="0,0"
+              End="19.5,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="4,27" />
+                  <mssgle:LineSegment
+                    End="15.5,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,27"
+                    Point2="19.5,27"
+                    Point3="19.5,31" />
+                  <mssgle:LineSegment
+                    End="19.5,46.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24824,41 +26431,117 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     design-time-name="Package\Seguridad UsuarioAtributo">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Seguridad UsuarioAtributo\OLE DB Destination"
-          TopLeft="258,139" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150,42"
           Id="Package\Seguridad UsuarioAtributo\OLE DB Source"
-          TopLeft="220,50" />
+          TopLeft="124,26" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Seguridad UsuarioAtributo\OLE DB Destination"
+          TopLeft="259,197" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Seguridad UsuarioAtributo\OLE DB Source 1"
+          TopLeft="352,27" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Seguridad UsuarioAtributo\Merge Join"
+          TopLeft="268,121" />
         <EdgeLayout
           Id="Package\Seguridad UsuarioAtributo.Paths[OLE DB Source Output]"
-          TopLeft="295,92">
+          TopLeft="199,68">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.5,47"
+              EndConnector="134,53"
               Start="0,0"
-              End="48.5,39.5">
+              End="134,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="4,23.5" />
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
                   <mssgle:LineSegment
-                    End="44.5,23.5" />
+                    End="130,26.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="44.5,23.5"
-                    Point2="48.5,23.5"
-                    Point3="48.5,27.5" />
+                    Point1="130,26.5"
+                    Point2="134,26.5"
+                    Point3="134,30.5" />
                   <mssgle:LineSegment
-                    End="48.5,39.5" />
+                    End="134,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Seguridad UsuarioAtributo.Paths[OLE DB Source Output1]"
+          TopLeft="431.5,69">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-78.1666666666667,52"
+              Start="0,0"
+              End="-78.1666666666667,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.8206686930091" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.8206686930091"
+                    Point2="0,30.8206686930091"
+                    Point3="-4,30.8206686930091" />
+                  <mssgle:LineSegment
+                    End="-74.1666666666667,30.8206686930091" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-74.1666666666667,30.8206686930091"
+                    Point2="-78.1666666666667,30.8206686930091"
+                    Point3="-78.1666666666667,34.8206686930091" />
+                  <mssgle:LineSegment
+                    End="-78.1666666666667,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Seguridad UsuarioAtributo.Paths[Merge Join Output]"
+          TopLeft="333,163">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.5,34"
+              Start="0,0"
+              End="11.5,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="4,17" />
+                  <mssgle:LineSegment
+                    End="7.5,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,17"
+                    Point2="11.5,17"
+                    Point3="11.5,21" />
+                  <mssgle:LineSegment
+                    End="11.5,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24870,6 +26553,22 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Seguridad UsuarioAtributo\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Seguridad UsuarioAtributo\OLE DB Destination">
     <Properties>
@@ -24884,7 +26583,7 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Seguridad UsuarioAtributo\OLE DB Source">
+    design-time-name="Package\Seguridad UsuarioAtributo\OLE DB Source 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
