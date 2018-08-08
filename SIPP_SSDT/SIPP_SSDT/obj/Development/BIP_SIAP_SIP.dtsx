@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="190"
-  DTS:VersionGUID="{C4A90E7A-DBC6-4A57-9536-DD4E35EFFEFA}">
+  DTS:VersionBuild="192"
+  DTS:VersionGUID="{53491573-E1B0-44A7-ACE2-2AD53EA9E329}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD/THuawM1YjNAXZ6+b5ArmAAAAAASAAACgAAAAEAAAAI+Z0AftNJPoQWFqEEsaIhsYAAAAaHojgqsJhIG3b5488ndyuRYnuDd3Pr0eFAAAAOiWiM2YXNs5jQQZtj6LVxoFZLUC</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAKH7/wYTFMXDUUD7hnbTp4AAAAAASAAACgAAAAEAAAALoqBO6VJzjfYqJ+1KYItGUYAAAA9znVv2xeCwfR0gRtRE8KI4IBExQHtZ6jFAAAAJWzk8xP6aBeWcaWFS3C8QG5vpsm</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2BJOx7XU9TVyhJ36EJIXEAAAAAASAAACgAAAAEAAAAEtjiQ1D9/0IqxBr/STwvpUYAAAAj+ol71ACfNefh76f+VoepVB4HQ4SKalOFAAAAATiotZ1elqm/iJbCJQ7HmpHVmqd</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADkEeYMqMP8RPhyCi+cjYa/AAAAAASAAACgAAAAEAAAAGbrN1M/LGvbIZMJC3TzK/kYAAAAX7LyZJWlFHNzs8AajApxvG9hwin5ijLVFAAAABKH65bQyAH8WH8dygwcPGKdqUCY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -53,11 +53,11 @@
       DTS:ObjectName="SIPP Destination">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=10.14.142.113;User ID=IMPCAdmin;Initial Catalog=SIPP-Migracion;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=PE-LPALQ00139\MSSQLSERVER2012;User ID=sa;Initial Catalog=SIPP_Test;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABWv9TXI5FiAUh0xSchZZevAAAAAASAAACgAAAAEAAAAPA+fTS+h0QHQRflm1+RTI0YAAAA802KRNHnkbgPuSa98yaWhpcB4TyCrNV3FAAAAMT0cD1CddznrGQNfXyr7cGaj+7d</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACsfmn+9bmeEjklOqSxlpw7AAAAAASAAACgAAAAEAAAACZz0TUV6xMcvSfdq/FEzGgYAAAAnQMYJ2Jfz39Bi+jftAi43jAUvvI59WhAFAAAAEam0/tyl4JtECINRZbF30SIo+wV</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -73,7 +73,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Localizacion Traduccion"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="2">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -827,7 +827,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -844,7 +844,7 @@ from cteAgrupacionMarca where orden = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update AgrupacionMarca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1702,7 +1702,7 @@ from dbo.cargo</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Cargo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1719,7 +1719,7 @@ from dbo.cargo</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Cargo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="4">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3012,7 +3012,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3029,7 +3029,7 @@ order by IdPais_BIP asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Ciudad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="7">
+          DTS:ThreadHint="6">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3879,7 +3879,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate Tables"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3896,7 +3896,7 @@ ORDER BY IDPAIS</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Migracion Pais"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5504,7 +5504,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -5521,7 +5521,7 @@ order by IDPAIS_BIP ASC</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="UPDATE Maestro Empresa"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="3">
+          DTS:ThreadHint="7">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7943,7 +7943,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -7960,7 +7960,7 @@ order by PARAMETRONEGOCIO asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Periodo"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10150,7 +10150,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10167,7 +10167,7 @@ order by idagrupacionmarca asc</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion Marca"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -10997,7 +10997,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema table"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11014,7 +11014,7 @@ where IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion ModalidadVenta"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="5">
+          DTS:ThreadHint="2">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11872,7 +11872,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -11889,7 +11889,7 @@ from dbo.TIPODOCUMENTO</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update Migracion TipoDocumentoIdentidad"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="4">
+          DTS:ThreadHint="8">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12720,7 +12720,7 @@ WHERE pai.IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Schema Table TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -12737,7 +12737,7 @@ WHERE pai.IDIDIOMA = 1</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Update TipoNegocio"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="6">
+          DTS:ThreadHint="5">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18857,7 +18857,6 @@ order by UsuarioId</property>
       DTS:refId="Package\Migracion UsuarioRol"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{30A3207B-EDCE-4807-8250-68E846320987}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -18873,7 +18872,7 @@ order by UsuarioId</property>
           DTS:LocaleID="-1"
           DTS:ObjectName="Create Schema"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="3">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -18892,7 +18891,7 @@ order by UsuarioId</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Seguridad Rol"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="2">
+      DTS:ThreadHint="3">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -20932,9 +20931,9 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
           TopLeft="41,11" />
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="False"
+          IsExpanded="True"
           PanelSize="231,113"
-          Size="231,43"
+          Size="231,156"
           Id="Package\Migracion UsuarioRol"
           TopLeft="1274,499" />
         <NodeLayout
@@ -21409,18 +21408,30 @@ inner join mig.cargo ca on dem.PARAMETROCARGO = ca.CargoId_BIP</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="1192,521.25">
+          TopLeft="1192,522">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="82,0"
+              EndConnector="82,55"
               Start="0,0"
-              End="74.5,0">
+              End="74.5,55">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="74.5,0" />
+                    End="37,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37,0"
+                    Point2="41,0"
+                    Point3="41,4" />
+                  <mssgle:LineSegment
+                    End="41,51" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,51"
+                    Point2="41,55"
+                    Point3="45,55" />
+                  <mssgle:LineSegment
+                    End="74.5,55" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
