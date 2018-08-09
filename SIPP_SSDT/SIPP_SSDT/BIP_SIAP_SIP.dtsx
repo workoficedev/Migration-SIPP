@@ -11,8 +11,8 @@
   DTS:LocaleID="10250"
   DTS:ObjectName="BIP_SIAP_SIP"
   DTS:PackageType="5"
-  DTS:VersionBuild="198"
-  DTS:VersionGUID="{4BFFE8D7-1097-4AA4-97D9-47B3048838B2}">
+  DTS:VersionBuild="202"
+  DTS:VersionGUID="{1DC10C24-EDD1-4AC3-AF23-C30D7C60F610}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA7Cax2oqFq012CWZ55jKxvAAAAAASAAACgAAAAEAAAAKLlYBBhvxEMwmUNOHKraaMYAAAAqDXAfUiEOTerwTP6u/jNJkoa7QYc5iTwFAAAAH8pYLSAE+HThi0SlbGp3HqXvCP+</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADBSqVEsUOYd97nn+nPYj8PAAAAAASAAACgAAAAEAAAAMvyOfm5wyOk1es7+JkMdYsYAAAARMfVzrHfQ2LlUGnKRZ+cgRp8G5ujAb8nFAAAAPjMPuKyNSfp6jPm2FF5P0f2H7BL</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,7 +42,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABrXgNCgV0M/ShjrF5OKWHiAAAAAASAAACgAAAAEAAAAF6Av8/WsY1P/cyGaHhBQQAYAAAA0KRSrYT4mIhxo+hdHbozrqfaJh93igEPFAAAAL7TQ7GfVD/7kc0zGRFjaljHj8T1</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAy64QuH4jI9GHurpjZFLWIAAAAAASAAACgAAAAEAAAAELVT/9pXfyVtHb4XuJvn0MYAAAA8c1hxqx7ws8gxrmPT5uG35CRo18G6M36FAAAAFmJzAoLSHsjB5lWJ+zZ/SonS8gA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -57,7 +57,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABofXKM+u9ePgJithabXtNBAAAAAASAAACgAAAAEAAAAGFKLXwcCZYECwfXkj9ueLgYAAAA2qbNvnoP7Pk0Bm388QPnZymkTVrUZIFdFAAAAL2nwd0la/ClMRIobyo+LNv0+GOo</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAG+3G1BsVBUu4N7e2+I+kPgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC75g0jP4VD8DHGCn+cgF45AAAAAASAAACgAAAAEAAAAO0ks9Bjs8YEMQdIzd41R2UYAAAApa4u/UjXqRR6f+G6VNs15TQxRB8y2lfZFAAAALBB3Sqy1oGkqiiflhNxaaZ/f1fl</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1170,13 +1170,11 @@ from cteAgrupacionMarca where orden = 1</property>
                       name="Merge Join Left Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionLarga]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="70"
-                          cachedName="DescripcionLarga"
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoCargo]"
+                          cachedDataType="i4"
+                          cachedName="CodigoCargo"
                           cachedSortKeyPosition="1"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLarga]" />
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[CodigoCargo]" />
                         <inputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionCorta]"
                           cachedCodepage="1252"
@@ -1184,6 +1182,13 @@ from cteAgrupacionMarca where orden = 1</property>
                           cachedLength="10"
                           cachedName="DescripcionCorta"
                           lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionCorta]" />
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[DescripcionLarga]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="70"
+                          cachedName="DescripcionLarga"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLarga]" />
                         <inputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Left Input].Columns[Abreviatura]"
                           cachedCodepage="1252"
@@ -1245,13 +1250,11 @@ from cteAgrupacionMarca where orden = 1</property>
                       name="Merge Join Right Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input].Columns[DescripcionLarga]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="70"
-                          cachedName="DescripcionLarga"
+                          refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input].Columns[CodigoCargo]"
+                          cachedDataType="i4"
+                          cachedName="CodigoCargo"
                           cachedSortKeyPosition="1"
-                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[DescripcionLarga]" />
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CodigoCargo]" />
                         <inputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Inputs[Merge Join Right Input].Columns[CargoId_BIP]"
                           cachedDataType="i4"
@@ -1264,7 +1267,6 @@ from cteAgrupacionMarca where orden = 1</property>
                   <outputs>
                     <output
                       refId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output]"
-                      isSorted="true"
                       name="Merge Join Output">
                       <outputColumns>
                         <outputColumn
@@ -1288,8 +1290,7 @@ from cteAgrupacionMarca where orden = 1</property>
                           dataType="str"
                           length="70"
                           lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLarga]"
-                          name="DescripcionLarga"
-                          sortKeyPosition="1">
+                          name="DescripcionLarga">
                           <properties>
                             <property
                               containsID="true"
@@ -1538,7 +1539,6 @@ from cteAgrupacionMarca where orden = 1</property>
                           cachedDataType="str"
                           cachedLength="70"
                           cachedName="DescripcionLarga"
-                          cachedSortKeyPosition="1"
                           externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\Migracion Cargo.Inputs[OLE DB Destination Input].ExternalColumns[NombreCargo]"
                           lineageId="Package\Migracion Cargo\Migrar Cargo\Merge Join.Outputs[Merge Join Output].Columns[DescripcionLarga]" />
                       </inputColumns>
@@ -1656,6 +1656,7 @@ from cteAgrupacionMarca where orden = 1</property>
                       description="The SQL command to be executed."
                       name="SqlCommand"
                       UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+CodigoProgramatico as CodigoCargo,
 DescripcionCorta,
 DescripcionLarga,
 DescripcionCorta as Abreviatura,
@@ -1669,7 +1670,7 @@ GETDATE() as FechaActualizacion,
 0 as Eliminado,
 Newid() as ETL
 from dbo.cargo
-group by DESCRIPCIONLARGA, DESCRIPCIONCORTA</property>
+where idpais = 1</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -1819,6 +1820,15 @@ group by DESCRIPCIONLARGA, DESCRIPCIONCORTA</property>
                           lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ETL]"
                           name="ETL"
                           truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CodigoCargo]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CodigoCargo]"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CodigoCargo]"
+                          name="CodigoCargo"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -1876,6 +1886,10 @@ group by DESCRIPCIONLARGA, DESCRIPCIONCORTA</property>
                           refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ETL]"
                           dataType="guid"
                           name="ETL" />
+                        <externalMetadataColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CodigoCargo]"
+                          dataType="i4"
+                          name="CodigoCargo" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -1883,6 +1897,11 @@ group by DESCRIPCIONLARGA, DESCRIPCIONCORTA</property>
                       isErrorOut="true"
                       name="OLE DB Source Error Output">
                       <outputColumns>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CodigoCargo]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CodigoCargo]"
+                          name="CodigoCargo" />
                         <outputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DescripcionCorta]"
                           codePage="1252"
@@ -1993,9 +2012,10 @@ group by DESCRIPCIONLARGA, DESCRIPCIONCORTA</property>
                       name="SqlCommand"
                       UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
 IdParametro as CargoId_BIP,
+CodigoProgramatico as CodigoCargo,
 DescripcionLarga
 from dbo.cargo
-order by DESCRIPCIONLARGA asc</property>
+order by CodigoProgramatico asc</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -2051,6 +2071,15 @@ order by DESCRIPCIONLARGA asc</property>
                           length="70"
                           lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[DescripcionLarga]"
                           name="DescripcionLarga"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CodigoCargo]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CodigoCargo]"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CodigoCargo]"
+                          name="CodigoCargo"
                           sortKeyPosition="1"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
@@ -2066,6 +2095,10 @@ order by DESCRIPCIONLARGA asc</property>
                           dataType="str"
                           length="70"
                           name="DescripcionLarga" />
+                        <externalMetadataColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CodigoCargo]"
+                          dataType="i4"
+                          name="CodigoCargo" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -2078,6 +2111,11 @@ order by DESCRIPCIONLARGA asc</property>
                           dataType="i4"
                           lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CargoId_BIP]"
                           name="CargoId_BIP" />
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CodigoCargo]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CodigoCargo]"
+                          name="CodigoCargo" />
                         <outputColumn
                           refId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[DescripcionLarga]"
                           codePage="1252"
@@ -2158,7 +2196,7 @@ order by DESCRIPCIONLARGA asc</property>
                             <property
                               dataType="System.Int32"
                               description="Specifies the sort order of the column."
-                              name="NewSortKeyPosition">1</property>
+                              name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
                         <inputColumn
@@ -2323,6 +2361,22 @@ order by DESCRIPCIONLARGA asc</property>
                               name="NewSortKeyPosition">0</property>
                           </properties>
                         </inputColumn>
+                        <inputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Inputs[Sort Input].Columns[CodigoCargo]"
+                          cachedDataType="i4"
+                          cachedName="CodigoCargo"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CodigoCargo]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -2354,8 +2408,7 @@ order by DESCRIPCIONLARGA asc</property>
                           dataType="str"
                           length="70"
                           lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[DescripcionLarga]"
-                          name="DescripcionLarga"
-                          sortKeyPosition="1">
+                          name="DescripcionLarga">
                           <properties>
                             <property
                               containsID="true"
@@ -2494,6 +2547,20 @@ order by DESCRIPCIONLARGA asc</property>
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column that is associated with this output column."
                               name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[ETL]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[CodigoCargo]"
+                          dataType="i4"
+                          lineageId="Package\Migracion Cargo\Migrar Cargo\Sort.Outputs[Sort Output].Columns[CodigoCargo]"
+                          name="CodigoCargo"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Migracion Cargo\Migrar Cargo\OLE DB Source.Outputs[OLE DB Source Output].Columns[CodigoCargo]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -22204,9 +22271,7 @@ order by CargoId_BIP asc</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -22228,9 +22293,7 @@ order by CargoId_BIP asc</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
@@ -23507,21 +23570,21 @@ order by CargoId_BIP asc</property>
         <NodeLayout
           Size="130,42"
           Id="Package\Migracion Cargo\Migrar Cargo\Merge Join"
-          TopLeft="590,118" />
+          TopLeft="588,116" />
         <EdgeLayout
           Id="Package\Migracion Cargo\Migrar Cargo.Paths[Sort Output]"
-          TopLeft="529,139.5">
+          TopLeft="529,138.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="61,0"
+              EndConnector="59,0"
               Start="0,0"
-              End="53.5,0">
+              End="51.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.5,0" />
+                    End="51.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23532,18 +23595,18 @@ order by CargoId_BIP asc</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Migracion Cargo\Migrar Cargo.Paths[OLE DB Source Output1]"
-          TopLeft="653.25,82">
+          TopLeft="652.25,82">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36"
+              EndConnector="0,34"
               Start="0,0"
-              End="0,28.5">
+              End="0,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="0,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -23554,30 +23617,30 @@ order by CargoId_BIP asc</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Migracion Cargo\Migrar Cargo.Paths[Merge Join Output]"
-          TopLeft="655,160">
+          TopLeft="653,158">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.5,54"
+              EndConnector="21.5,56"
               Start="0,0"
-              End="19.5,46.5">
+              End="21.5,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23" />
+                    End="0,24" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23"
-                    Point2="0,27"
-                    Point3="4,27" />
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
                   <mssgle:LineSegment
-                    End="15.5,27" />
+                    End="17.5,28" />
                   <mssgle:CubicBezierSegment
-                    Point1="15.5,27"
-                    Point2="19.5,27"
-                    Point3="19.5,31" />
+                    Point1="17.5,28"
+                    Point2="21.5,28"
+                    Point3="21.5,32" />
                   <mssgle:LineSegment
-                    End="19.5,46.5" />
+                    End="21.5,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -25086,7 +25149,7 @@ order by CargoId_BIP asc</property>
     design-time-name="Package\Migracion TipoDocumentoIdentidad\Migrar TipoDocumentoIdentidad">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,42"
           Id="Package\Migracion TipoDocumentoIdentidad\Migrar TipoDocumentoIdentidad\Multicast"
@@ -25122,9 +25185,7 @@ order by CargoId_BIP asc</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25158,9 +25219,7 @@ order by CargoId_BIP asc</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -25194,9 +25253,7 @@ order by CargoId_BIP asc</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
